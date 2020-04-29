@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Vibeke Bertelsen (Udart) &#187; screen cast</title>
+	<atom:link href="http://udart.dk/tag/screen-cast/feed/" rel="self" type="application/rss+xml" />
+	<link>http://udart.dk</link>
+	<description>Digital art and motion graphics</description>
+	<lastBuildDate>Wed, 20 Jun 2018 10:54:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.1.1</generator>
+	<item>
+		<title>The 5$ video mixer &#8211; how to do a DV screen cast through Firewire</title>
+		<link>http://udart.dk/2009/07/30/the-5-video-mixer-how-to-do-a-dv-screen-cast-through-firewire/</link>
+		<comments>http://udart.dk/2009/07/30/the-5-video-mixer-how-to-do-a-dv-screen-cast-through-firewire/#comments</comments>
+		<pubDate>Thu, 30 Jul 2009 15:12:23 +0000</pubDate>
+		<dc:creator><![CDATA[Udart]]></dc:creator>
+				<category><![CDATA[Tips and tutorials]]></category>
+		<category><![CDATA[DV]]></category>
+		<category><![CDATA[Firewire]]></category>
+		<category><![CDATA[Quartz Composer]]></category>
+		<category><![CDATA[screen cast]]></category>
+		<category><![CDATA[video capture]]></category>
+		<category><![CDATA[VirtualDV]]></category>
+
+		<guid isPermaLink="false">http://www.udart.dk/?p=71</guid>
+		<description><![CDATA[I have found a way to transfer a live video screen capture from one Mac to another Mac using DV over Firewire. This might be useful for VJs who want to mix video from two computers without using a capture card &#8211; the 5$ in the title of this post is for buying a Firewire cable. Have a look at this video tutorial or read on for a text version &#8211; sorry about the less than optimal video and audio quality &#8211; this is my first attempt at doing a tutorial: First of all you need to download a couple of components which I have collected in a handy zip file: DV screen capture components Here are the links for the original sources of the components in the zip file: VirtualDV (in FireWire SDK 26) Quartz Composer Live DV v002 Screen Capture Please be aware that as I have not [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>I have found a way to transfer a live video screen capture from one Mac to another Mac using DV over Firewire.<br />
+This might be useful for VJs who want to mix video from two computers without using a capture card &#8211; the 5$ in the title of this post is for buying a Firewire cable.</p>
+<p>Have a look at this video tutorial or read on for a text version &#8211; sorry about the less than optimal video and audio quality &#8211; this is my first attempt at doing a tutorial:</p>
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="300" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=5840999&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="400" height="300" src="http://vimeo.com/moogaloop.swf?clip_id=5840999&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<p>First of all you need to download a couple of components which I have collected in a handy zip file: <a href="http://www.udart.dk/wp-content/DV-screen-capture.zip" >DV screen capture components</a></p>
+<p>Here are the links for the original sources of the components in the zip file:</p>
+<ul>
+<li><a href="https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20298"  target="_blank">VirtualDV (in FireWire SDK 26)</a></li>
+<li><a href="http://developer.apple.com/SampleCode/QuartzComposerLiveDV/index.html"  target="_blank">Quartz Composer Live DV</a></li>
+<li><a href="http://002.vade.info/?page_id=4"  target="_blank">v002 Screen Capture</a></li>
+</ul>
+<p>Please be aware that as I have not created the software I have no way of making changes or helping out if this hack does not work for you.</p>
+<p>1. Connect the two Macs with a Firewire cable.</p>
+<p>2. Download the software and start up the VirtualDV app on both computers. This is to fool the computers into believing there is a hardware DV device connected</p>
+<p><a href="http://www.udart.dk/wp-content/tutorial-1.png" ><img class="alignnone size-full wp-image-89" title="tutorial 1" src="http://www.udart.dk/wp-content/tutorial-1.png" alt="tutorial 1" width="506" height="623" /></a><br />
+Step 2</p>
+<p>3. Unpack the v002ScreenCapture.plugin.zip file and install the plugin into /Library/Graphics/Quartz Composer Plug-Ins</p>
+<p>4. Start up QuartzComposerLiveDV on the computer that you want to capture video from.</p>
+<p>5. Click apple+o and open one of the files inside the &#8216;screen sizes&#8217; folder &#8211; select a file that matches the area of the screen you want to capture.<br />
+<a href="http://www.udart.dk/wp-content/tutorial-2.png" ><img class="alignnone size-full wp-image-90" title="tutorial 2" src="http://www.udart.dk/wp-content/tutorial-2.png" alt="tutorial 2" width="578" height="448" /></a><br />
+Step 5</p>
+<p>6. Now if you see a live screen capture in the window inside QuartzComposerLiveDV you&#8217;re up and running.<br />
+<a href="http://www.udart.dk/wp-content/tutorial-3.png" ><img class="alignnone size-full wp-image-91" title="tutorial 3" src="http://www.udart.dk/wp-content/tutorial-3.png" alt="tutorial 3" width="577" height="450" /></a><br />
+Step 6</p>
+<p>7. Check that it works by going to the receiving computer and open Quicktime Player. Open the Recording tab in the Preferences pane of Quicktime to check that a new video source has been created.<br />
+<a href="http://www.udart.dk/wp-content/tutorial-4.png" ><img class="alignnone size-full wp-image-92" title="tutorial 4" src="http://www.udart.dk/wp-content/tutorial-4.png" alt="tutorial 4" /></a><br />
+Step 7</p>
+<p>Things to note:<br />
+&#8211; I have only tested this on Leopard. Let me know if get it working on other versions of Mac OS.<br />
+&#8211; There is a visible delay as with other DV sources. This is because DV is a compressed format and so it also takes some CPU resources on both machines<br />
+&#8211; No sound is transmitted although sound is a part of the DV codec. I think this i because there is no sound included in the QuartzComposerLiveDV app.<br />
+&#8211; It&#8217;s only possible to capture the primary screen due to the way that v002ScreenCapture works.<br />
+&#8211; Keep the QuartzComposerLiveDV app visible &#8211; if you go apple+H the DV signal stops.</p>
+<p>Other uses:<br />
+&#8211; You could also connect a DV camera and record the screen cast if that is of any use to you&#8230;<br />
+&#8211; Or you could load up any other Quartz Composer file in QuartzComposerLiveDV and send that instead. (I tried this and not all QC comps work. I am not sure why&#8230;)</p>
+]]></content:encoded>
+			<wfw:commentRss>http://udart.dk/2009/07/30/the-5-video-mixer-how-to-do-a-dv-screen-cast-through-firewire/feed/</wfw:commentRss>
+		<slash:comments>45</slash:comments>
+		</item>
+	</channel>
+</rss>
