@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<!-- BEGIN html -->
+<!-- A ThemeZilla design (http://www.themezilla.com) - Proudly powered by WordPress (http://wordpress.org) -->
+
+<!-- BEGIN head -->
+<head>
+
+	<!-- Meta Tags -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<![endif]-->
+	<meta name="generator" content="Mesh 1.0" />
+<meta name="generator" content="ZillaFramework 1.1" />
+<meta name="robots" content="," />
+
+	<!-- Title -->
+	<title>&#8216;Two Way MIDI&#8217; module for Modul8 | Vibeke Bertelsen (Udart)</title>
+
+	<!-- RSS & Pingbacks -->
+	<link rel="pingback" href="../../../../xmlrpc.php" />
+
+	<link rel="alternate" type="application/rss+xml" title="Vibeke Bertelsen (Udart) &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Vibeke Bertelsen (Udart) &raquo; Comments Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Vibeke Bertelsen (Udart) &raquo; &#8216;Two Way MIDI&#8217; module for Modul8 Comments Feed" href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/feed/" />
+<link rel='stylesheet' id='Mesh-css'  href='../../../../wp-content/themes/mesh-package/mesh/style.css@ver=4.1.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zilla-share-css'  href='../../../../wp-content/plugins/zilla-share/styles/zilla-share.css@ver=4.1.1.css' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.3.2 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-51025809-2', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/modernizr-2.6.2.min.js@ver=2.6.2'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery.js@ver=1.11.1'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.min.js@ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php@rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='My reading list' href='../../09/my-reading-list/index.html' />
+<link rel='next' title='New visuals' href='../../../12/06/257/index.html' />
+<meta name="generator" content="WordPress 4.1.1" />
+<link rel='canonical' href='index.html' />
+<link rel='shortlink' href='http://udart.dk/?p=240' />
+<link rel="shortcut icon" href="../../../../wp-content/udart-logo-favico.png" />
+	<style type='text/css' id='zilla-custom-styles'>
+/* Custom CSS */
+.portfolio-description a { color: #000000 }
+
+/* Custom Accent Color */
+/* Custom Accent Color */
+
+a,
+#logo:hover,
+.entry-title a:hover,
+button:hover,
+input[type='submit']:hover,
+input[type='submit']:focus,
+input[type='button']:hover,
+input[type='reset']:hover,
+#commentform .required,
+.page-navigation .nav-previous a:hover,
+.page-navigation .nav-next a:hover,
+#footer a,
+widget .current-cat > a,
+.widget .current-menu-item > a,
+.widget ul a:hover,
+.widget ul a.active-filter,
+.mobile-menu a:hover,
+.mobile-menu .current-cat > a,
+.mobile-menu .current-menu-item > a,
+.mobile-menu .current_page_item > a,
+.mobile-menu ul a:hover,
+#footer .zilla-tweet-widget .twitter-time-stamp:hover { color: #00bf79; }
+
+.post-media a,
+.post-media .zilla-slide-prev:hover,
+.post-media .zilla-slide-next:hover,
+.portfolio-feed .portfolio > a,
+#toggle-footer { background-color: #00bf79; }
+
+.zilla-gallery .slide-caption,
+.single-portfolio .entry-content { background-color: rgba(0,191,121,0.9); }
+
+</style>
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="single single-post postid-240 single-format-standard unknown post-two-way-midi-module-for-modul8 zilla">
+
+	<!-- BEGIN #container -->
+	<div id="container" class="container">
+
+				<!-- BEGIN #header -->
+		<header id="header" class="header">
+			<div id="header-inner" class="header-inner">
+			
+			<!-- BEGIN site-intro -->
+			<div class="site-intro">
+				<a id="logo" href="../../../../index.html">
+									<img src="../../../../wp-content/udart-logo.png" alt="Vibeke Bertelsen (Udart)"/>
+								</a>
+
+				<p class="site-description">Digital art and motion graphics</p>			<!-- END .site-intro -->
+			</div>
+
+			<ul id="mobile-menu" class="mobile-menu"><li id="menu-item-434" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-434"><a href="../../../../category/blog/index.html">Blog</a></li>
+<li id="menu-item-425" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-425"><a href="../../../../index.html@p=420.html">Archives</a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-544"><a href="../../../../index.html@p=542.html">About me</a></li>
+</ul>
+			<!--BEGIN #sidebar .aside-->
+<div id="sidebar" class="aside" role="complementary">
+
+	<div id="nav_menu-2" class="widget widget_nav_menu"><div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-434"><a href="../../../../category/blog/index.html">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-425"><a href="../../../../index.html@p=420.html">Archives</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-544"><a href="../../../../index.html@p=542.html">About me</a></li>
+</ul></div></div><div id="nav_menu-3" class="widget widget_nav_menu"><h3 class="widget-title">Work</h3><div class="menu-work-menu-container"><ul id="menu-work-menu" class="menu"><li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-540"><a href="../../../../index.html@p=537.html">Tumblr blog</a></li>
+<li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-517"><a href="../../../../index.html@p=516.html">Beepleodyssey</a></li>
+<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-458"><a href="../../../../index.html@p=441.html">Rumpistol music video</a></li>
+<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-457"><a href="../../../../index.html@p=446.html">Valley Of Uncanny #01</a></li>
+<li id="menu-item-468" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-468"><a href="../../../../index.html@p=463.html">Showtime</a></li>
+<li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-456"><a href="../../../../index.html@p=451.html">Interactive line drawing</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-541"><a href="../../../../index.html@p=528.html">Volumetric</a></li>
+<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-462"><a href="../../../../index.html@p=459.html">Sliider</a></li>
+</ul></div></div><div id="zilla_social_widget-2" class="widget widget_zilla_social_widget"><h3 class="widget-title">Follow Udart</h3><div class="zilla-social size-32px"><a href="https://www.facebook.com/udart" class="Facebook" target="_blank"><img src="../../../../wp-content/plugins/zilla-social/images/32px/Facebook.png" alt="Facebook" /></a> <a href="https://www.instagram.com/vibeke_udart/" class="Instagram" target="_blank"><img src="../../../../wp-content/plugins/zilla-social/images/32px/Instagram.png" alt="Instagram" /></a> <a href="https://www.tumblr.com/blog/vibekebertelsen" class="Tumblr" target="_blank"><img src="../../../../wp-content/plugins/zilla-social/images/32px/Tumblr.png" alt="Tumblr" /></a> <a href="https://vimeo.com/udart" class="Vimeo" target="_blank"><img src="../../../../wp-content/plugins/zilla-social/images/32px/Vimeo.png" alt="Vimeo" /></a> </div></div><div id="text-3" class="widget widget_text"><h3 class="widget-title">About Udart</h3>			<div class="textwidget">Vibeke Bertelsen (Udart) is a visual artist and creative coder who works solo doing digital artworks and as a part of the group called Vertigo doing large scale light installations. Contact me on <a class="js-maillink"></a><p></p>
+
+<script type="text/javascript">
+	 	var m1829_part1 = "info";
+	 	var m1829_part2 = "@udart.dk";
+		var m1829 = m1829_part1+m1829_part2;
+		var links = document.getElementsByTagName("a")
+		for (var i = 0; i<links.length; i++) {
+			if (links[i].className == "js-maillink") {
+				links[i].innerHTML = m1829;
+				links[i].href = "mailto:" + m1829;
+			}
+		}
+</script></div>
+		</div>
+<!--END #sidebar .aside-->
+</div>
+
+			<p class="copyright">&copy; 2020 <a href="../../../../index.html">Vibeke Bertelsen (Udart)</a>.</p>
+
+			<p class="credit">Powered by <a href="http://wordpress.org/">WordPress</a><br /><a href="http://themezilla.com/themes/mesh">Mesh</a> by <a href="http://www.themezilla.com/">ThemeZilla</a></p>
+
+						<!--END .header-inner -->
+			</div>
+		<!--END #header-->
+		</header>
+		
+		<!--BEGIN #content -->
+		<div id="content" class="content">
+		
+<!--BEGIN #primary -->
+<div id="primary" role="main">
+
+		<!--BEGIN .hentry -->
+	<article class="post-240 post type-post status-publish format-standard hentry category-software" id="post-240">
+	
+		
+
+		<!--BEGIN .entry-content -->
+		<div class="entry-content">
+			<h1 class="entry-title">&#8216;Two Way MIDI&#8217; module for Modul8</h1>
+		
+			<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px Helvetica;"><a href="http://www.udart.dk/wp-content/two-way-midi-(udart).png" ><img class="alignleft size-full wp-image-245" style="margin: 5px; border: 1px solid black;" title="Screen shot 2010-11-25 at 21.20.07" src="http://www.udart.dk/wp-content/Screen-shot-2010-11-25-at-21.20.07.png" alt="Screen shot 2010-11-25 at 21.20.07" width="255" height="232" /></a></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>What does &#8216;Two Way MIDI&#8217; do?</strong></p>
+<p>Two Way MIDI is a module that enables Modul8 to send a midi signal back to your midi device. Two Way MIDI will keep your midi device updated with the values from Modul8 so that you avoid annoying &#8216;jumps&#8217; when the current setting of your device doesn&#8217;t match the values of Modul8. Two Way MIDI is downloaded from the &#8216;Online Library&#8217; menu item within the Modul8 application.</p>
+<p>Whenever you touch a control in Modul8 or switch to another layer Two way MIDI will update your MIDI device with the current values.</p>
+<p style="font: normal normal normal 16px/normal Helvetica; margin: 0px;"><strong>Who can use this module?</strong></p>
+<p>This module is only relevant if you have a midi device that is designed to <em>receive</em> MIDI as well as send MIDI. Typically these devices will have motorized faders or 360 degree (endless) knobs with LED displays. Examples of such are Novation MIDI controllers and Behringer BCF2000.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><span id="more-240"></span><strong> </strong></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;">
+<p><iframe src="http://player.vimeo.com/video/17095561?byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="313" frameborder="0"></iframe><a target="_blank" href="http://vimeo.com/17095561" >Modul8 &#8211; introduction to the &#8216;Two Way Midi&#8217; module</a> from <a target="_blank" href="http://vimeo.com/user702278" >Udart (Vibeke Bertelsen)</a> on <a target="_blank" href="http://vimeo.com" >Vimeo</a>.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>How do I get started with this module?</strong></p>
+<p>Before you start please clear your current midi map. This is not a must but it is recommended to avoid unexpected results when trying out the module. You can save your current midi map by selecting Mapping -&gt; Import/Export -&gt; Export MIDI map. Then remove the map by selecting Mapping -&gt; Edit MIDI map -&gt; Clear map. Please do this for &#8216;Focus&#8217; as well as &#8216;Position&#8217; and &#8216;Layerset + Position&#8217; modes.</p>
+<p>1. When you first start the module you&#8217;ll see a list called &#8216;MIDI Device&#8217;. Please start by selecting your MIDI device from the list. The module should now be able to communicate with your midi device.</p>
+<p>2. Try turning a knob on your midi device. You should see some text appear at the very bottom of the module window. Eg. &#8216;receive: ch1 cc3 127&#8242;. This is information about the midi your device is sending to the module.</p>
+<p>3. Now try mapping something. Click Edit, click something in the Modul8 interface. If a text appears in the &#8216;action&#8217; field (e.g. &#8216;ctrl_layer_alpha&#8217;) you can map it to your midi device. Simply turn a knob and it is mapped.</p>
+<p>4. Click another Modul8 control or map multiple MIDI knobs to the same Modul8 control if you wish</p>
+<p>5. Click &#8216;end edit&#8217; when you are done mapping. You should now be able to control Modul8 with your mapped knobs. Also if you change the Modul8 control the change should be reflected on the MIDI device</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Helvetica;"><strong>FAQ</strong></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Will this module work with my device?</strong></p>
+<p>The module is currently in beta and has only been tested with the Novation Nocturn and the Behringer BCF2000 MIDI controllers. It is designed to work for all devices that are able to receive MIDI, so it needs to be tested. Please get in touch if you have tested it with other devices<span style="font: 16.0px Helvetica;"><strong>.</strong></span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; min-height: 19.0px;"><strong> </strong></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>What version of Modul8 do I need to use this module?</strong></p>
+<p>So far this module has only been tested with Modul8 v2.6 but it may work with older versions. Please get in touch if you have tested the module with an older version of Modul8.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; min-height: 19.0px;"><strong> </strong></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>What MIDI values are sent for the different Modul8 controls?</strong></p>
+<p>0-127 for all scalers and sliders and knobs.</p>
+<p>For layerset buttons 0-7 is sent.</p>
+<p>For Media set pages 0-7 is sent. (8 for the &#8216;sp&#8217; page)</p>
+<p>And so on 0,1,2,3…. for all special elements like radio buttons etc.</p>
+<p>You can see what midi values are being sent out from Modul8 by touching a Modul8 control (one that has been mapped). Look at the very bottom of the module window. A message will appear e.g. &#8216;send: ch2 cc34 127&#8242;. The last number is the midi value. &#8216;ch&#8217; is channel and the next is &#8216;cc&#8217; for control change or &#8216;n&#8217; for note.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>How do I set up a button on my MIDI device to select layer sets in Modul8?</strong></p>
+<p>Look for a setting on your MIDI device to create a &#8216;Step&#8217; button. So that first time you press the button it sends 0, next tme 1 etc. with a max value of 7.</p>
+<p>You can also set a rotary knob with a minimum of 0 and a max limit of 7.</p>
+<p>If this is not possible with your device it is possible to use the regular Modul8 midi mapping (the Mapping menu in Modul8). See <span style="font: 8.0px Helvetica;">&#8216;</span>Can I use this module together with the regular MIDI mapping in Modul8&#8242;.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>How do I set up a button on my MIDI device to select media sets in Modul8?</strong></p>
+<p>See above. Same method as when mapping layer sets.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Does this module work with all controls in Modul8?</strong></p>
+<p>No, there are some major limitations unfortunately. First of all &#8216;Two Way MIDI&#8217; is not able to work with any of the controls in any of the other modules. Secondly there are also a few features in the main Modul8 interface that does not work with &#8216;Two Way MIDI&#8217; (e.g. create/duplicate/delete layer).</p>
+<p>However there is a workaround. You can use the regular MIDI mapping in Modul8 together with the module to overcome some of these limitations (your only challenge is to keep track of what you have mapped where).</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>What is the difference between this module and the regular MIDI mapping in Modul8?</strong></p>
+<p>&#8211; Module sends and receves midi. Buiit in mapping only receives</p>
+<p>&#8211; Built in mapping has &#8216;focus&#8217;, &#8216;position&#8217; and &#8216;layerset + position&#8217; modes. Module only has &#8216;focus&#8217; and &#8216;position&#8217; mode.</p>
+<p>&#8211; This module treats layer set buttons, media set buttons and other radio buttons as groups instead of separate buttons. E.g. you can map one rotary knob or button to flip through layer sets.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Can I use this module together with the regular MIDI mapping in Modul8?</strong></p>
+<p>Yes, it is possible to use this module and the built in MIDI mapping (the mapping menu). The same control can even be mapped in the built in MIDI mapping and in the module at the same time &#8211; but I don&#8217;t recommend this &#8211; I recommend only using the built in MIDI mapping for controls that are not covered by this module.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>What are the &#8216;focus&#8217; and &#8216;position&#8217; buttons for?</strong></p>
+<p>These are buttons for switching between two modes of midi mapping. They are identical to the &#8216;focus&#8217; and &#8216;position&#8217; mode of the regular MIDI mapping in Modul8.</p>
+<p>In &#8216;focus&#8217; mode you map the dial to the active layer in Modul8. E.g. you map a dial to the movie speed in &#8216;focus&#8217; mode. If you go to another layer your dial will change the speed of the selected layer.</p>
+<p>In &#8216;position&#8217; mode you map to a specific layer. E.g. the movie speed of layer 3. If you change focus to any other layer your dial will still control the speed of layer 3.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Why is there no &#8216;layerset + position&#8217; mode?</strong></p>
+<p>The regular Midi mapping in Modul8 has &#8216;focus&#8217;, &#8216;position&#8217; and &#8216;layerset + position&#8217; mapping modes. This module only has the &#8216;focus&#8217; and &#8216;position&#8217; modes. I have made this decision as I see no advantage of building this into the module. If you need this mode just use the regular midi mapping for this.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Are my MIDI mappings kept next time I start Modul8?</strong></p>
+<p>The module has two options for where to save your MIDI mapping &#8216;Default&#8217; and &#8216;Project&#8217;. When you make a mapping in &#8216;Default&#8217; mode the MIDI mapping will be kept inside Modul8 and be active next time you start Modul8. If you select &#8216;Project&#8217; mode and make a MIDI mapping the mapping will be kept inside the your Project file and so the MIDI mapping will be active next time you open that project.</p>
+<p>Please be aware that if you edit the module code in the Module editor, you will loose any &#8216;Default&#8217; map you might have.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Can I have a different MIDI mapping for each project?</strong></p>
+<p>Yes. Just choose &#8216;Project&#8217; mode before you make the mapping.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Can I export my MIDI mapping?</strong></p>
+<p>Not directly no. You can however reuse your mapping with a small workaround. E.g. if you want to use your MIDI mapping from project A in Project B: Open project A. Project A will be in &#8216;project mode&#8217; if it has it&#8217;s own MIDI mapping. Click &#8216;copy to default&#8217;. Next open Project B, make sure the module is in &#8216;default&#8217; mode then click &#8216;copy to project&#8217;.</p>
+<p>Also if you wish to back up your default mapping you can create a new blank Modul8 project and click &#8216;copy to project&#8217;. Your default mapping will now be saved inside the project file. You can recover your mapping at a later date if you need it by opening the project and clicking &#8216;copy to default&#8217;.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>What happens if I have made a default MIDI mapping and then open a project that has it&#8217;s own mapping?</strong></p>
+<p>This is not a problem you can freely switch between your default and your project mapping. Just be aware if you are in default or project mode before clicking &#8216;edit&#8217; and making additional mappings.</p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica;"><strong>Can I use multiple MIDI controllers?</strong></p>
+<p>The module is only designed to be used with one MIDI device at a time. There may be workarounds to using multiple controllers but this has not been tested.</p>
+<div class="zilla-share"><p class="zilla-text">Share it:</p><a target="_blank" href="https://twitter.com/share"  class="twitter-share-button" data-via="vibeke_udart" data-count="none">Tweet</a><div class="fb-like" data-send="false" data-show-faces="false" data-layout="button_count"></div></div>					<!--END .entry-content -->
+		</div>
+
+		
+	<!--BEGIN .entry-meta .entry-index-->
+	<footer class="entry-meta entry-meta-single">
+	 <span class="published"><a href="index.html" title="21:37" rel="bookmark">25 November, 2010</a></span><span class="author">By <a href="../../../../author/admin/index.html" title="View all posts by Udart" rel="author">Udart</a></span>		<span class="entry-categories"><a href="../../../../category/software/index.html" rel="category tag">Software</a></span>
+		<span class="entry-tags"></span>
+		<!--END .entry-meta entry-header -->
+	</footer>
+              
+		<!--END .hentry-->  
+	</article>
+	
+	
+<!-- BEGIN #comments -->
+<div id="comments">
+
+
+			<h3 class="comments-title">40 Comments</h3>
+
+			<ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="li-comment-256">
+
+		<div id="comment-256">
+
+			<img alt='' src='http://0.gravatar.com/avatar/0344202f71306128405a11719fab8d68?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Luka</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-256">26 November, 2010 at 01:44</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Amazing, I&#8217;ll give it a try in next couple of days. </p>
+<p>Thank you very much for this module!!!!</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-257">
+
+		<div id="comment-257">
+
+			<img alt='' src='http://1.gravatar.com/avatar/9be3a40617588332ae4185d0d9bfd1c2?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.myspace.com/vjtoshiro"  rel='external nofollow' class='url'>Toshiro</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-257">26 November, 2010 at 15:47</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi, thanks for the module.</p>
+<p>I&#8217;m testing with Ipad using TouchOSC and Osculator but it&#8217;s not working.<br />
+I know that TouchOSC sends and receive data, but with your module I&#8217;m not receiving messeges back to ipad.</p>
+<p>Could you help me?</p>
+<p>Thanks,<br />
+Toshiro.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-259">
+
+		<div id="comment-259">
+
+			<img alt='' src='http://0.gravatar.com/avatar/eb6879c27cd9acfdbf747f7ad0978cc2?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.mindbr.com"  rel='external nofollow' class='url'>VJ LEO</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-259">26 November, 2010 at 19:53</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Thank you so much for making this module, I have not yet downloaded, but it was something that I was wanting and thinking about over the last month.</p>
+<p>Very good explanation aswel!</p>
+<p>cheers,<br />
+Leo</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-270">
+
+		<div id="comment-270">
+
+			<img alt='' src='http://0.gravatar.com/avatar/e7404e932b3b6fbca39c9f79bc8b92e6?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.myspace.com/vjfabinho"  rel='external nofollow' class='url'>VJ FABINHO</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-270">27 November, 2010 at 08:43</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Tested and approved &#8230; modul8 + iPad + Osculator + OSC Touch.<br />
+Solved an old problem.<br />
+Very  thanks.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-271">
+
+		<div id="comment-271">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-271">27 November, 2010 at 13:09</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>@VJ Fabinho. That&#8217;s an interesting setup. Did not think of that option. Could you perhaps share a video or a tutorial on how to do this? I&#8217;m quite curious &#8211; do you manage to get MIDI feedback onto the iPad?<br />
+Also it seems Toshiro would like some help from you&#8230;</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-276">
+
+		<div id="comment-276">
+
+			<img alt='' src='http://1.gravatar.com/avatar/f639f15a5423d5dfb73db019ead65664?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://visualcorps.fr"  rel='external nofollow' class='url'>VJ_Reality</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-276">27 November, 2010 at 21:23</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Tested With my Touch OSC Layer + OSCulator + Ipad + Modul8 Too.</p>
+<p>Very Thanks You Vibeke.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-286">
+
+		<div id="comment-286">
+
+			<img alt='' src='http://0.gravatar.com/avatar/e7404e932b3b6fbca39c9f79bc8b92e6?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.myspace.com/vjfabinho"  rel='external nofollow' class='url'>VJ FABINHO</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-286">28 November, 2010 at 13:33</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>yes, I have feedback on MIDI iPad.<br />
+I just followed the footsteps of his video, without any difficulty.<br />
+if so, whether they still want a video showing it, I&#8217;ll write more later</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-293">
+
+		<div id="comment-293">
+
+			<img alt='' src='http://1.gravatar.com/avatar/540e446631cc415e50f90f3a2bcd0649?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.benjaminjantzen.de"  rel='external nofollow' class='url'>pixelschubser</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-293">2 December, 2010 at 19:03</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>i tried too with osculator, ipad , touch osc but couldnt get it working &#8211; i dont get the feedback what settings do you use &#8211; can you share your osculator file?</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-298">
+
+		<div id="comment-298">
+
+			<img alt='' src='http://0.gravatar.com/avatar/e5c51baca437b3795888a276da938dde?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">vj algo</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-298">7 December, 2010 at 18:04</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Super, ça l&#8217;air de fonctionné terrible, ce qui ma bien fait marré, c&#8217;est de voir bouger les faders d&#8217;opacité alors qu&#8217;il sont télécommandé par un LFO du modul BPM master, c&#8217;est grand !</p>
+<p>petit soucis pour passer d&#8217;un hardware a un autre, je suis passer d&#8217;une bcf 2000 à une apc 40, modul8 reconnait bien l&#8217;APC mais il faut rebooter pour que ‘Two Way MIDI’ l&#8217;a reconnaisse, oups</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-314">
+
+		<div id="comment-314">
+
+			<img alt='' src='http://0.gravatar.com/avatar/6e90689a4f0eab6cfa94df58a4b539a4?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.luiscript.com"  rel='external nofollow' class='url'>luiscript</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-314">7 January, 2011 at 00:38</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>It&#8217;s funny when I made this module I didn&#8217;t even think of TouscOSC. Now it seems a lot of people are using it in conjunction with TouchOSC. Thanx for sharing&#8230;</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-315">
+
+		<div id="comment-315">
+
+			<img alt='' src='http://0.gravatar.com/avatar/6e90689a4f0eab6cfa94df58a4b539a4?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.luiscript.com"  rel='external nofollow' class='url'>luiscript</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-315">8 January, 2011 at 15:06</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I didn&#8217;t write this comment, It seems like &#8220;I made this module&#8221; I just use it to create this: <a target="_blank" href="http://www.youtube.com/watch?v=PKUYJz5sX68"  rel="nofollow">http://www.youtube.com/watch?v=PKUYJz5sX68</a>. I think you made a mistake when you edit it. But Still love you module.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-316">
+
+		<div id="comment-316">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-316">12 January, 2011 at 09:29</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I made some sort of error. The comment above is written by my not luiscript</p>
+<p>-Vibeke</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-319">
+
+		<div id="comment-319">
+
+			<img alt='' src='http://1.gravatar.com/avatar/bc08fc63059a3a0ea6f4291f04ee0e97?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">JAY</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-319">22 January, 2011 at 17:31</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Your modul seems to be exactly what i was looking for. Thanks for sharing it &#8211; but where`s the download link? Maybe  i`m blind?!</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-320">
+
+		<div id="comment-320">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-320">24 January, 2011 at 15:02</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>All modules are available from the menu inside Modul8</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-326">
+
+		<div id="comment-326">
+
+			<img alt='' src='http://0.gravatar.com/avatar/cfe2de54ea26cb94ee7e8d7e1b06f953?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">doctor whom</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-326">13 March, 2011 at 09:36</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>thanks for making this . you rock. plan on using this one  every time i vj i imagine.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-362">
+
+		<div id="comment-362">
+
+			<img alt='' src='http://0.gravatar.com/avatar/ecd2c5aeffd4dab0f2eee6aeb70a3444?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">AcessDenied?</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-362">29 March, 2011 at 21:47</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I had a problem on my Macbook pro&#8230; it didn&#8217;t work but I saw that my IAC driver (Gestionnaire IAC) wasn&#8217;t ON so to turn that On you do:</p>
+<p>First you should have in your Two way midi module:<br />
+MIDI DEVICE<br />
+&#8211; IAC driver &#8211; bus 1<br />
+-&#8221; the name of your midi controller&#8221;</p>
+<p>If not:&#8212;&gt;</p>
+<p>1- finder &#8211;&gt; applications &#8211;&gt; utility &#8212;&gt; audio and midi config<br />
+2- Windows menu &#8211;&gt; open MIDI windows<br />
+3- you should have an icon IAC driver &#8220;double-clic&#8221;<br />
+4- select on the box near  &#8220;the driver is connected&#8221; </p>
+<p>than you should see &#8220;IAC driver &#8211; Bus 1&#8243; in the &#8220;two way midi(udart) module &#8230;in french &#8220;gestionnaire IAC &#8211; bus 1&#8243;</p>
+<p>don&#8217;t know if i&#8217;m clear &#8230; i&#8217;m french by the way&#8230;</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-389">
+
+		<div id="comment-389">
+
+			<img alt='' src='http://0.gravatar.com/avatar/2c5f0614b84c418f83fec2361ee0e7e3?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">KjellV</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-389">20 April, 2011 at 14:35</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I was wondering if you could help me with a problem I was wondering about, since it seems that you have some midi skills.<br />
+Is there a way to send midi commands that light up specific leds on my midi controller when a certain filter s active?</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-391">
+
+		<div id="comment-391">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-391">21 April, 2011 at 07:48</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi Kjell,<br />
+I am assuming you mean the filters of the Filters module? As far as I am aware it&#8217;s not possible &#8216;out of the box&#8217;. It would require a new module e.g. a version of the existing Filters module that is modified to send MIDI commands to your controller.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-404">
+
+		<div id="comment-404">
+
+			<img alt='' src='http://0.gravatar.com/avatar/81880002988993f5d248f7c83a6fbcd1?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.lotech.co.nz"  rel='external nofollow' class='url'>lotech</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-404">2 May, 2011 at 05:20</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>As with other I got your module working with TouchOSC/iPad. Thanks.<br />
+Going to try and get my Modules to send midi for their states, not sure it will be as smart as yours &#8211; might just have to direct into hardcoded midi addresses. Either way thanks again and lets hope this get built in to Modul8 sooner than later.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-416">
+
+		<div id="comment-416">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-416">27 July, 2011 at 08:18</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Uri, the modle is in he Online Library -> Public Library.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-417">
+
+		<div id="comment-417">
+
+			<img alt='' src='http://1.gravatar.com/avatar/1a626fe77e6dc61aeacf8f1a1e9ccfd2?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">nuno</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-417">2 August, 2011 at 04:28</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I don&#8217;t see no download area available! Help please! :/</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-418">
+
+		<div id="comment-418">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-418">19 August, 2011 at 20:41</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>The module is downloaded from the &#8216;Online Library&#8217; menu item within the Modul8 application.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-426">
+
+		<div id="comment-426">
+
+			<img alt='' src='http://1.gravatar.com/avatar/b669125eee7a34e900149f7615a0a9b3?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.timhix.com"  rel='external nofollow' class='url'>Tim Hicks</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-426">24 August, 2011 at 22:38</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I have followed the instructions and got two way signals running from my ipad through osculator to modul8 vers 2.6.3. and back.  But everytime I try and use it, it triggers multiple layers and buttons, jumps and selects several layers at once. Basically its not working as it should. Can anyone lend some advice?</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-436">
+
+		<div id="comment-436">
+
+			<img alt='' src='http://0.gravatar.com/avatar/2bb7bab7f5fda4638a0d3b1b22715869?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">vj lucky</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-436">22 September, 2011 at 01:39</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>thanks<br />
+I managed to run the VMX CODANOVA two I&#8217;d never get it to work.<br />
+I tried using the BCR BCFe, but still nothing you can give me an idea?<br />
+There are other settings to do?<br />
+Thank you.<br />
+sorry if I repeat</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-438">
+
+		<div id="comment-438">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-438">8 October, 2011 at 12:19</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>@Lucky. Could you please elaborate. I am not sure I understand your problem. You are also welcome to send a quicktime screen recording that illustrates the problem. Often this is the best way to understand what went wrong.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-448">
+
+		<div id="comment-448">
+
+			<img alt='' src='http://0.gravatar.com/avatar/c1762a88aabdeb13f7ba9ca156f212d1?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.vjemtv.net"  rel='external nofollow' class='url'>eMTv</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-448">10 November, 2011 at 22:05</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Not sure if I ever congratulated you for writing such a nice piece of software. It definitely makes the midi experience much better in M8 with a BCF device.<br />
+Thanks a lot,<br />
+keep up the great work.<br />
+Best,<br />
+em</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-449">
+
+		<div id="comment-449">
+
+			<img alt='' src='http://1.gravatar.com/avatar/99dc53a15df5c69fb0d12bc69dd91ff5?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://jigglesvision.com"  rel='external nofollow' class='url'>jigglesworth</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-449">11 November, 2011 at 05:47</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Thx so much for this I am so close!! I am using an ipad thru MIDI Network Setup and connecting but not using an oscilator?  Is that why the TWO WAY MIDI isn&#8217;t detecting my ipad as a valid controller?   the &#8220;action&#8221; codes wont go into the &#8220;mapped actions&#8221; box after i click each one.  Plz help! thx!! powerhuggs</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-453">
+
+		<div id="comment-453">
+
+			<img alt='' src='http://1.gravatar.com/avatar/72bfab80bc9eebb4943a5afe46c19f22?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">anwar guerra</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-453">23 November, 2011 at 17:13</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi there from Mexico, ithink your modul is amazing. Other way i have a cuestion, now days a have a vci 100 dj midi controller of vestax, so i have mapping the controller with your modul, but i think i didn´t well. My situatuion is if i turn the knob previusly mapp since cero at the begin to the left to 127 at the end, just in the middle the parameter (after 63 points, automaticly the parameter shows 127 points, i repeat just when the knob is right in the middle, and i have an annoying jump 0-62-127-63-127, what i need to do to change this situation, i will aprecite so much. thnks</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-461">
+
+		<div id="comment-461">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-461">28 February, 2012 at 12:19</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi there, it&#8217;s a bit hard to understand exactly what is happening with your controller from what you write. But if you want to get deeper into finding a solution you should monitor exactly which values your vestax sends out. Maybe it simply sends those values to Modul8. if that is the case the problem is not on the module rather you should look for some setting on the Vestax to change it&#8217;s behaviour. Please try out this or some other MIDI testing app: <a target="_blank" href="http://www.snoize.com/MIDIMonitor/"  rel="nofollow">http://www.snoize.com/MIDIMonitor/</a> and let me know what results you get.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-463">
+
+		<div id="comment-463">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-463">28 February, 2012 at 13:22</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi jigglesworth, I am not quite sure from your description and I have no experience with using the iPad for this. Sorry.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-466">
+
+		<div id="comment-466">
+
+			<img alt='' src='http://0.gravatar.com/avatar/2af5f97d86d9f6a8a384085fd64d5928?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Christopher</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-466">10 April, 2012 at 00:24</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hello, I would like to start with a &#8220;Thank You&#8221;! The module is great! Works awesome. I am however stuck with an issue, that I am unaware of how to correct.<br />
+I mapped a rotart knob from a BCR2000 for &#8220;Layer Focus&#8221;<br />
+I would like to be able to select the layer, which I have successfully achieved.<br />
+My issue is that when selected from the rotary knob &#8211; none of the selected Layer controls are updated on the BCR2000. Have you heard of an issue like this before?<br />
+All of my other controls are updated to the BCR2000 when the layer is selected within Modul8.<br />
+Thanks,<br />
+Chris</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-470">
+
+		<div id="comment-470">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-470">11 April, 2012 at 08:38</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi Christopher, thanx for getting in touch. As I don&#8217;t have the BCR2000 myself it&#8217;s difficult for me to give you any advice. But perhaps someone else seens this who can help out.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-497">
+
+		<div id="comment-497">
+
+			<img alt='' src='http://1.gravatar.com/avatar/d4175e30b6c2453c96eede45f4908efc?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Christopher</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-497">31 May, 2012 at 20:13</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Im using the Bcr2000 in conjunction with Touch OSC for the iPad and I have live routing communicating between both of them so that they act as controller for each other. If I control from within modul8 (computer) I can only send the data to one midi device in the selection window.<br />
+Is there a way to send to multiple devices? multiple selections or all?<br />
+I found the code in the editor :<br />
+#User clicked an item in the midi device list. Set MidiDevice<br />
+elif msg == &#8216;MIDIDevice':<br />
+	MIDIDevice = param[&#8216;selection&#8217;]<br />
+	#print &#8216;MIDIDevice &#8216; + MIDIDevice</p>
+<p>I attempted &#8216;all&#8217; for the param with no success.<br />
+Thanks in advance.<br />
+Chris</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-498">
+
+		<div id="comment-498">
+
+			<img alt='' src='http://1.gravatar.com/avatar/d4175e30b6c2453c96eede45f4908efc?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Christopher</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-498">31 May, 2012 at 20:32</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Here is a video to show you my configuration, I prob was not too clear in my previous statement. Thanks udart.<br />
+<a target="_blank" href="http://www.youtube.com/watch?v=sWEwRqINhzs"  rel="nofollow">http://www.youtube.com/watch?v=sWEwRqINhzs</a></p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-499">
+
+		<div id="comment-499">
+
+			<img alt='' src='http://1.gravatar.com/avatar/35d1a93646cc8b2b1210ff5498dc72af?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Udart</cite>  <span class="author-tag">(Author)</span>			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-499">21 September, 2012 at 18:29</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi Christopher,<br />
+I don&#8217;t know if you&#8217;ll ever see this as I am replying five months later. I am pretty far away from anything to do with Modul8 right now. I am sorry i cannot be of more help but I am not able to answer what you&#8217;re looking for without diving more into Modul8 and the module again. But I will def. take this problem with me if/when I update the module.</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-521">
+
+		<div id="comment-521">
+
+			<img alt='' src='http://0.gravatar.com/avatar/8fdfe5689fa61328ea559186f028d30f?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://www.timhix.com"  rel='external nofollow' class='url'>Tim</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-521">3 November, 2012 at 03:24</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>I&#8217;m having trouble with the lemur app and two way midi module. My faders jump whenever I get feedback. Anyone dealing with this or have a solution?</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-550">
+
+		<div id="comment-550">
+
+			<img alt='' src='http://1.gravatar.com/avatar/38a972fc19843592d651de4a7ecfc1f6?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://raylab.com"  rel='external nofollow' class='url'>Vlad</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-550">18 January, 2013 at 11:43</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Just shared a modified version of this module in public library, see (ray lab) Hybrid Two Way MIDI (UDART).<br />
+Added:<br />
+1. Extensions to handle devices or controls that do not support MIDI feedback: module will lock the incoming values until they match the current value of Modul8 control (sliders en knobs), so they wan&#8217;t jump when switching between layers. Use &#8216;feedback&#8217; checkbox to choose. If checked, feedback is sent to control (original behaviour). If unchecked, module will lock the incoming value until match.<br />
+2. Togggle option for buttons (very useful)<br />
+3. Save/Load current midi map to/from file. Loading simply overwrites the current map.</p>
+<p>This is beta, please test before using in production!</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-551">
+
+		<div id="comment-551">
+
+			<img alt='' src='http://0.gravatar.com/avatar/6347c84d6375ccf0894bf1ccb4ba4315?s=45&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn">Kevin Graber</cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-551">30 January, 2013 at 23:40</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hi Udart<br />
+I just discovered your recently built (Raylab) Hybrid Two Way Midi Out on the Modules Library. It works well with my BCR2000. With the &#8220;regular Two Way Midi Out&#8221; i wasnt succesful!<br />
+Thanks a lot!<br />
+What about the TOGGLE &amp; FEEDBACK switches? What do they do?<br />
+Best<br />
+Kevin</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-619">
+
+		<div id="comment-619">
+
+			<img alt='' src='http://1.gravatar.com/avatar/38a972fc19843592d651de4a7ecfc1f6?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://raylab.com"  rel='external nofollow' class='url'>Vlad</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-619">20 March, 2013 at 17:20</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hey Kevin,</p>
+<p>Sorry for late reaction, wasn&#8217;t following this thread for a while.</p>
+<p>Toggle is a latch function, to handle controller with piano keys. They usually sen MIDI ON and then immediately OFF, so you M8 button with jump back to original value. Select it if you experience this problem</p>
+<p>Feedback: when selected, will work as original UDART version and send MIDI back to you device. I use it with TouchOSC on IPad, to sync controls on IPad with Module8 values.<br />
+When deselected, it will NOT send MIDI feedback, but will prevent jumping sliders for controllers they don&#8217;t read MIDI feedback.</p>
+<p>New save/load function will allow you to save the settings in a file, so you could easy switch between presets.</p>
+<p>There are also few improvements to the original code and I&#8217;m happy it works for you!<br />
+Cheers,<br />
+Vladimir</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-904">
+
+		<div id="comment-904">
+
+			<img alt='' src='http://1.gravatar.com/avatar/ba85e63ff58b11d592bcc03a22934a0e?s=45&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D45&amp;r=G' class='avatar avatar-45 photo' height='45' width='45' />
+			<div class="comment-author vcard">
+				<cite class="fn"><a target="_blank" href="http://geeklife.ch"  rel='external nofollow' class='url'>Florian Broox</a></cite>  			</div>
+
+			<div class="comment-meta commentmetadata"><a href="http://udart.dk/2010/11/25/two-way-midi-module-for-modul8/comment-page-1/#comment-904">29 December, 2013 at 01:39</a> &middot; </div>
+
+			<div class="comment-body">
+				<p>Hey</p>
+<p>I&#8217;ve developed a software to manipulate the midi data which is coming from a controller, so that I can use midi controllers with &#8220;NoteOn, NoteOff&#8221; buttons and special controls in Modul8.</p>
+<p>So in my software I create a new VirtualMidiEndpoint (it looks like a normal midi device) and map this virtual endpoint to Modul8. The real device is disabled  in Modul8.</p>
+<p>Now everything works fine except of your two way midi module, because it doesn&#8217;t show my virtual endpoint. Even if I disable the real device in the preferences of Modul8, it is shown in your application.</p>
+<p>Would it be possible to fix this and just show the Midi devices which are enabled in Modul8 and also the virtual midi devices?</p>
+<p>Sorry for my english!</p>
+<p>Kindly regards<br />
+Florian</p>
+			</div>
+
+			
+		</div>
+</li><!-- #comment-## -->
+			</ol>
+
+										<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel Reply</a></small></h3>
+									<form action="http://udart.dk/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" class="submit" value="Submit Comment" />
+							<input type='hidden' name='comment_post_ID' value='240' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="08279d22cd" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="188"/></p>					</form>
+							</div><!-- #respond -->
+				
+<!-- END #comments -->
+</div>
+	<!--END #primary -->
+</div>
+
+
+				<!-- END #content -->
+		</div>
+
+	<!-- END #container.container -->
+	</div> 
+
+	
+		<!-- BEGIN #footer -->
+	<footer id="footer" class="clearfix">
+	
+		<a href="index.html#" id="toggle-footer">Expand/Collapse Footer</a>
+
+		<div id="footer-inner" class="footer-inner clearfix">
+		<div class="footer-column"><div id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-64"><a href="../../../../category/blog/index.html" >Blog</a> (12)
+</li>
+	<li class="cat-item cat-item-3"><a href="../../../../category/coolstuff/index.html" title="Cool things I found that I&#039;d like to share. Software, music videos, visuals etc.">Cool stuff</a> (10)
+</li>
+	<li class="cat-item cat-item-23"><a href="../../../../category/portfolio/index.html" title="Photos and videos documenting my work">Portfolio</a> (12)
+</li>
+	<li class="cat-item cat-item-12"><a href="../../../../category/software/index.html" >Software</a> (4)
+</li>
+	<li class="cat-item cat-item-5"><a href="../../../../category/tutorials/index.html" title="Tips and tricks for visualists">Tips and tutorials</a> (12)
+</li>
+	<li class="cat-item cat-item-1"><a href="../../../../category/uncategorized/index.html" >Uncategorized</a> (7)
+</li>
+		</ul>
+</div></div><div class="footer-column"><div id="tag_cloud-4" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href='../../../../tag/3d/index.html' class='tag-link-28' title='2 topics' style='font-size: 11.405405405405pt;'>3d</a>
+<a href='../../../../tag/3d-graphics/index.html' class='tag-link-48' title='2 topics' style='font-size: 11.405405405405pt;'>3D graphics</a>
+<a href='../../../../tag/adobe-bridge/index.html' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>Adobe Bridge</a>
+<a href='../../../../tag/arkaos-grandvj/index.html' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>Arkaos GrandVJ</a>
+<a href='../../../../tag/blackmagic-intensity/index.html' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>Blackmagic Intensity</a>
+<a href='../../../../tag/chrome/index.html' class='tag-link-53' title='2 topics' style='font-size: 11.405405405405pt;'>Chrome</a>
+<a href='../../../../tag/chromium-embedded-framework/index.html' class='tag-link-52' title='2 topics' style='font-size: 11.405405405405pt;'>Chromium Embedded Framework</a>
+<a href='../../../../tag/concert-visuals/index.html' class='tag-link-10' title='1 topic' style='font-size: 8pt;'>concert visuals</a>
+<a href='../../../../tag/cue-list/index.html' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>cue list</a>
+<a href='../../../../tag/dv/index.html' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>DV</a>
+<a href='../../../../tag/emotion/index.html' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>eMotion</a>
+<a href='../../../../tag/firewire/index.html' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>Firewire</a>
+<a href='../../../../tag/iphone/index.html' class='tag-link-7' title='1 topic' style='font-size: 8pt;'>Iphone</a>
+<a href='../../../../tag/javascript/index.html' class='tag-link-49' title='3 topics' style='font-size: 13.675675675676pt;'>javascript</a>
+<a href='../../../../tag/madmapper/index.html' class='tag-link-31' title='3 topics' style='font-size: 13.675675675676pt;'>MadMapper</a>
+<a href='../../../../tag/mapping/index.html' class='tag-link-32' title='1 topic' style='font-size: 8pt;'>mapping</a>
+<a href='../../../../tag/matrox/index.html' class='tag-link-41' title='1 topic' style='font-size: 8pt;'>Matrox</a>
+<a href='../../../../tag/maxmsp/index.html' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>Max/MSP</a>
+<a href='../../../../tag/midi/index.html' class='tag-link-9' title='3 topics' style='font-size: 13.675675675676pt;'>midi</a>
+<a href='../../../../tag/modul8/index.html' class='tag-link-6' title='10 topics' style='font-size: 22pt;'>Modul8</a>
+<a href='../../../../tag/music-video/index.html' class='tag-link-11' title='3 topics' style='font-size: 13.675675675676pt;'>music video</a>
+<a href='../../../../tag/node-webkit/index.html' class='tag-link-51' title='2 topics' style='font-size: 11.405405405405pt;'>Node-Webkit</a>
+<a href='../../../../tag/obscura/index.html' class='tag-link-37' title='3 topics' style='font-size: 13.675675675676pt;'>Obscura</a>
+<a href='../../../../tag/osc/index.html' class='tag-link-8' title='1 topic' style='font-size: 8pt;'>OSC</a>
+<a href='../../../../tag/portfolio/index.html' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>Portfolio</a>
+<a href='../../../../tag/projection-mapping/index.html' class='tag-link-22' title='6 topics' style='font-size: 18.405405405405pt;'>projection mapping</a>
+<a href='../../../../tag/qlab/index.html' class='tag-link-38' title='1 topic' style='font-size: 8pt;'>Qlab</a>
+<a href='../../../../tag/quartz-composer/index.html' class='tag-link-13' title='7 topics' style='font-size: 19.351351351351pt;'>Quartz Composer</a>
+<a href='../../../../tag/quicktime-pro/index.html' class='tag-link-14' title='3 topics' style='font-size: 13.675675675676pt;'>Quicktime Pro</a>
+<a href='../../../../tag/review/index.html' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>review</a>
+<a href='../../../../tag/screen-cast/index.html' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>screen cast</a>
+<a href='../../../../tag/short-film/index.html' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>short film</a>
+<a href='../../../../tag/sliider/index.html' class='tag-link-50' title='3 topics' style='font-size: 13.675675675676pt;'>Sliider</a>
+<a href='../../../../tag/software/index.html' class='tag-link-12' title='1 topic' style='font-size: 8pt;'>Software</a>
+<a href='../../../../tag/syphon/index.html' class='tag-link-30' title='3 topics' style='font-size: 13.675675675676pt;'>Syphon</a>
+<a href='../../../../tag/theatre/index.html' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>theatre</a>
+<a href='../../../../tag/threejs/index.html' class='tag-link-60' title='2 topics' style='font-size: 11.405405405405pt;'>Threejs</a>
+<a href='../../../../tag/tutorial/index.html' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>Tutorial</a>
+<a href='../../../../tag/unity3d/index.html' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>Unity3D</a>
+<a href='../../../../tag/video-art/index.html' class='tag-link-21' title='3 topics' style='font-size: 13.675675675676pt;'>video art</a>
+<a href='../../../../tag/video-capture/index.html' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>video capture</a>
+<a href='../../../../tag/virtualdv/index.html' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>VirtualDV</a>
+<a href='../../../../tag/visuals/index.html' class='tag-link-54' title='2 topics' style='font-size: 11.405405405405pt;'>visuals</a>
+<a href='../../../../tag/webgl/index.html' class='tag-link-46' title='6 topics' style='font-size: 18.405405405405pt;'>WebGL</a>
+<a href='../../../../tag/workflow/index.html' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Workflow</a></div>
+</div></div>		</div>
+
+		<!-- END #footer -->
+	</footer>
+	
+
+	<!-- Theme Hook -->
+	<!-- Zilla Share Scripts -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><div id="fb-root"></div><script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, "script", "facebook-jssdk"));</script><script type='text/javascript' src='../../../../wp-content/plugins/akismet/_inc/form.js@ver=3.0.4'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/jquery.cycle2.min.js@ver=2'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/jquery.isotope.min.js@ver=1.5.25'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/jquery.jplayer.min.js@ver=2.5'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/jquery.dotdotdot.min.js@ver=1.6.5'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/jquery.fitvids.js@ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var zillaMesh = {"jsFolder":"http:\/\/udart.dk\/wp-content\/themes\/mesh-package\/mesh\/js","portfolioFilterAll":"All"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/mesh-package/mesh/js/jquery.custom.js@ver=4.1.1'></script>
+	
+<!--END body-->
+</body>
+<!--END html-->
+</html>
