@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Or master, depending on your default branch
+    branches: [ master ]  # Or master, depending on your default branch
 
 jobs:
   build:
