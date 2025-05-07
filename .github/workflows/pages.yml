@@ -2,7 +2,7 @@ name: Deploy GitHub Pages with LFS
 
 on:
   push:
-    branches: [ master ]  # Or 'master' if that’s your default branch
+    branches: [ main ]  # or 'master' depending on your branch name
   workflow_dispatch:
 
 permissions:
@@ -15,18 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository (with LFS)
+      - name: Checkout repo with Git LFS
         uses: actions/checkout@v3
         with:
           lfs: true
 
-      - name: Set up GitHub Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload GitHub Pages artifact
+      - name: Upload site content
         uses: actions/upload-pages-artifact@v2
         with:
-          path: '.'  # Change this if your site is in a subfolder like "build" or "dist"
+          path: '.'  # or "build"/"dist" if that's where your static files live
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
