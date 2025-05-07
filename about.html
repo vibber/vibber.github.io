@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeke Bertelsen (Udart) - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
+            color: white;
+        }
+
+        .top-menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            z-index: 10;
+        }
+
+        .top-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .top-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-menu ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .top-menu ul li a.active {
+            background-color: white;
+            color: black;
+        }
+        
+        /* Hamburger menu icon */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 20;
+            position: absolute;
+            right: 20px;
+            top: 18px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Mobile menu styles */
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .top-menu {
+                justify-content: flex-start;
+                padding: 20px;
+                height: 60px;
+            }
+            
+            .top-menu ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 250px;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding-top: 60px;
+                transition: all 0.3s ease;
+                gap: 0;
+            }
+            
+            .top-menu ul.active {
+                right: 0;
+            }
+            
+            .top-menu ul li {
+                width: 100%;
+            }
+            
+            .top-menu ul li a {
+                display: block;
+                padding: 15px 20px;
+                width: 100%;
+                font-size: 16px;
+            }
+            
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+            
+            .content-container {
+                flex-direction: column;
+                padding-top: 80px;
+            }
+            
+            .about-content, .images-container {
+                width: 100%;
+            }
+            
+            .images-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .image-item {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        .content-container {
+            display: flex;
+            padding-top: 60px; /* Reduced top margin */
+            height: calc(100vh - 160px); /* Account for menu and footer */
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 15px; /* Further reduced margin */
+        }
+
+        .about-content {
+            flex: 1;
+            padding: 40px;
+            padding-top: 0;
+            overflow-y: auto;
+            line-height: 1.6;
+        }
+        
+        .about-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 16px;
+            margin: 20px 0;
+            padding-left: 15px;
+            border-left: 2px solid white;
+        }
+
+        .images-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            padding-top: 68px; /* Align with first line of text */
+            padding-bottom: 180px;
+            overflow: hidden;
+        }
+        
+        .image-item {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .image-item img {
+            max-width: 90%;
+            max-height: calc(45vh - 140px); /* Half height for two images */
+            object-fit: contain;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            background: linear-gradient(transparent, rgba(0,0,0,1));
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+        
+        .fade-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Menu -->
+    <nav class="top-menu">
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="features.html">Features</a></li>         
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <!-- Left side - About content -->
+        <div class="about-content">
+            <h1 class="page-title">About Vibeke Bertelsen</h1>
+            
+            <div class="about-text">
+                Vibeke Bertelsen, who works under the name Udart, is a Danish artist mixing visuals and technology since the late 2010s. The name "Udart" comes from a Danish word meaning something that evolves unpredictably – a perfect match for her freewheeling approach to digital art.
+            </div>
+            
+            <div class="about-text">
+                Udart started her creative work as a VJ for concerts and underground club nights in Copenhagen. Today, she's part of the renowned Vertigo Artist Studio in Copenhagen, where she creates visual art for concerts and theater productions.
+            </div>
+            
+            <div class="about-text">
+                She loves playing with body transformations in her work – making dancers out of fingers and hands or creating trippy kaleidoscopic videos of faces. "Don't fear the weird" is a motto (coined by her friend Dy). Instead of trying to fix AI's quirks like strange-looking hands, she leans into the weirdness and makes it her signature style.
+            </div>
+            
+            <div class="quote">
+                "I am not trying to make deliberately unsettling stuff – I am just hunting for visuals that surprise me and keep me interested."
+            </div>
+            
+            <div class="about-text">
+                While diving into the AI art scene, Udart draws inspiration from both old-school and current vibes. She feels a kinship with surrealists and dadaists who broke all the visual rules back in their day. At the same time, she keeps tabs on contemporary digital artists pushing boundaries with new tech.
+            </div>
+            
+            <div class="about-text">
+                Her work has popped up in exhibitions across Europe and the US and scoring honorable mentions in Project Odyssey (2024-2025). In 2023 with Vertigo, she had a video installation featured at the prestigious National Gallery in Copenhagen.
+            </div>
+            
+            <div class="quote">
+                "I'm not interested in imitating reality. I want to invent a parallel reality that is completely different from everyday life."
+            </div>
+            
+            <div class="about-text">
+                Whether she's making short films or experimental videos, Udart keeps it playful and stays open to unexpected results. She sees AI as a tool that can truly change art and culture, opening doors to new kinds of creativity we can't even imagine yet.
+            </div>
+        </div>
+
+        <!-- Right side - Images -->
+        <div class="images-container">
+            <div class="image-item">
+                <img src="/images/udart-soma.png" alt="Udart artwork sample" />
+            </div>
+            <div class="image-item">
+                <img src="/images/hands-shape.png" alt="Udart artwork sample" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p style="margin-bottom:15px; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family: Arial, sans-serif;">
+        Vibeke Bertelsen (Udart)
+      </p>
+      <div class="social-icons">
+          <a href="https://www.instagram.com/_udart_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/vibeke_udart" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="protected-email mail-icon"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+
+    <!-- Gradient Fade at Bottom -->
+    <div class="fade-bottom"></div>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menu = document.getElementById('menu');
+            
+            mobileMenu.addEventListener('click', function() {
+                this.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link (for mobile)
+            const menuLinks = document.querySelectorAll('#menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        mobileMenu.classList.remove('active');
+                        menu.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        ////////email obfuscation
+         (function() {
+          // Configuration - replace with your actual email parts
+          const emailConfig = {
+            // Split your email into multiple parts (more parts = harder to detect pattern)
+            parts: [
+              { value: 'info', encoding: 'reverse' },      // First part (reversed)
+              { value: '@', encoding: 'ascii' },           // @ symbol (ASCII encoded)
+              { value: 'udart', encoding: 'shift' },       // Domain name (character shifted)
+              { value: '.', encoding: 'entity' },          // Dot (HTML entity)
+              { value: 'dk', encoding: 'base64' }          // TLD (Base64)
+            ],
+            // CSS class for elements to transform into email links
+            targetClass: 'protected-email'
+          };
+
+          // Encoding functions
+          const encoders = {
+            // Existing encoding functions...
+            reverse: function(str) {
+              return str.split('').reverse().join('');
+            },
+            
+            ascii: function(str) {
+              let result = '';
+              for(let i = 0; i < str.length; i++) {
+                result += str.charCodeAt(i) + (i < str.length - 1 ? ',' : '');
+              }
+              return result;
+            },
+            
+            shift: function(str) {
+              let result = '';
+              for(let i = 0; i < str.length; i++) {
+                result += String.fromCharCode(str.charCodeAt(i) + 3);
+              }
+              return result;
+            },
+            
+            entity: function(str) {
+              let result = '';
+              for(let i = 0; i < str.length; i++) {
+                result += '&#' + str.charCodeAt(i) + ';';
+              }
+              return result;
+            },
+            
+            base64: function(str) {
+              return btoa(str);
+            }
+          };
+
+          // Decoding functions (reverse of encoding)
+          const decoders = {
+            // Existing decoding functions...
+            reverse: function(str) {
+              return str.split('').reverse().join('');
+            },
+            
+            ascii: function(str) {
+              return str.split(',').map(code => String.fromCharCode(parseInt(code))).join('');
+            },
+            
+            shift: function(str) {
+              let result = '';
+              for(let i = 0; i < str.length; i++) {
+                result += String.fromCharCode(str.charCodeAt(i) - 3);
+              }
+              return result;
+            },
+            
+            entity: function(str) {
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = str;
+              return tempDiv.textContent;
+            },
+            
+            base64: function(str) {
+              return atob(str);
+            }
+          };
+
+          // Encode each part of the email based on its specified encoding method
+          function encodeEmailParts() {
+            return emailConfig.parts.map(part => {
+              return {
+                value: encoders[part.encoding](part.value),
+                encoding: part.encoding
+              };
+            });
+          }
+
+          // Create the encoded data attribute value
+          function createEncodedData(encodedParts) {
+            return JSON.stringify(encodedParts);
+          }
+
+          // Decode the email from encoded parts
+          function decodeEmail(encodedDataStr) {
+            try {
+              const encodedParts = JSON.parse(encodedDataStr);
+              return encodedParts.map(part => decoders[part.encoding](part.value)).join('');
+            } catch (e) {
+              console.error('Error decoding email:', e);
+              return '';
+            }
+          }
+
+          // Process elements with the target class
+          function processElements() {
+            const encodedParts = encodeEmailParts();
+            const encodedData = createEncodedData(encodedParts);
+            
+            // Find all elements with the target class
+            const elements = document.querySelectorAll('.' + emailConfig.targetClass);
+            
+            elements.forEach(element => {
+              // Set the data attribute with encoded information
+              element.setAttribute('data-encoded-email', encodedData);
+              
+              // Add click event listener to decode and open mailto
+              element.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const emailAddress = decodeEmail(this.getAttribute('data-encoded-email'));
+                window.location.href = 'mailto:' + emailAddress;
+              });
+              
+              // Only apply text changes if it's not an icon element
+              if (!element.classList.contains('mail-icon')) {
+                // Add mouseover event to decode and display
+                element.addEventListener('mouseover', function() {
+                  if (!this.textContent || this.textContent === '[Email Protected. Hover to display]') {
+                    const emailAddress = decodeEmail(this.getAttribute('data-encoded-email'));
+                    this.textContent = emailAddress;
+                  }
+                });
+                
+                // Initial content
+                element.textContent = '[Email Protected. Hover to display]';
+              }
+              
+              element.style.cursor = 'pointer';
+              element.title = 'Click to email';
+            });
+          }
+
+          // Initialize when DOM is fully loaded
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', processElements);
+          } else {
+            processElements();
+          }
+        })();        
+    </script>
+</body>
+</html>
