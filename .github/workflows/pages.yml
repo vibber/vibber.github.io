@@ -2,7 +2,7 @@ name: Deploy GitHub Pages with LFS
 
 on:
   push:
-    branches: [ main ]  # or 'master' depending on your branch name
+    branches: [ master ]  # or 'master' depending on your branch name
   workflow_dispatch:
 
 permissions:
