@@ -1,9 +1,17 @@
-<!DOCTYPE html>
+        .fade-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            z-index: -1;
+        }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibeke Bertelsen (Udart)</title>
+    <title>Vibeke Bertelsen (Udart) - Features</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -14,19 +22,9 @@
 
         body, html {
             height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
             color: white;
-        }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
         }
 
         .top-menu {
@@ -38,13 +36,6 @@
             justify-content: center;
             padding: 15px;
             z-index: 10;
-        }
-
-        @media screen and (max-width: 768px) {
-            .top-menu {
-                padding: 20px;
-                height: 60px;
-            }
         }
 
         .top-menu ul {
@@ -68,51 +59,11 @@
             color: black;
         }
 
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            font-size: 12px;
-            letter-spacing: 1px;
-            background: linear-gradient(transparent, rgba(0,0,0,1));
-        }
-
-        .social-icons {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 16px;
-        }
-
-        .fade-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-            z-index: -1;
+        .top-menu ul li a.active {
+            background-color: white;
+            color: black;
         }
         
-        .social-icons a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #1da1f2; /* Example hover color */
-        }
-
         /* Hamburger menu icon */
         .menu-toggle {
             display: none;
@@ -144,7 +95,8 @@
             
             .top-menu {
                 justify-content: flex-start;
-                padding-left: 20px;
+                padding: 20px;
+                height: 60px;
             }
             
             .top-menu ul {
@@ -186,24 +138,139 @@
             .menu-toggle.active span:nth-child(3) {
                 transform: translateY(-9px) rotate(-45deg);
             }
+            
+            .content-container {
+                flex-direction: column;
+                padding-top: 80px;
+            }
+            
+            .image-container, .features-content {
+                width: 100%;
+            }
         }
 
+        .content-container {
+            display: flex;
+            padding-top: 100px; /* Increased top margin */
+            height: calc(100vh - 160px); /* Account for menu and footer */
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom: 180px; /* Add space at the bottom to keep image above gradient */
+            overflow: hidden; /* Ensure content doesn't spill out */
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            max-height: calc(100vh - 280px); /* Reduce max height to account for bottom spacing */
+            object-fit: contain;
+            object-position: top; /* Align to top so bottom gets cropped if needed */
+        }
+
+        .placeholder-image {
+            width: 70%;
+            height: 90%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 0;
+            color: #999;
+            font-style: italic;
+        }
+
+        .features-content {
+            flex: 1;
+            padding: 40px;
+            padding-top: 0;
+            overflow-y: auto;
+        }
+        
+        .sub-header {
+            font-size: 16px;
+            font-style: italic;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .year-section {
+            margin-bottom: 30px;
+        }
+
+        .year {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .feature-item {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            background: linear-gradient(transparent, rgba(0,0,0,1));
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video class="video-background" autoplay muted loop playsinline>
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     <!-- Top Menu -->
     <nav class="top-menu">
         <ul id="menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="works.html">Works</a></li>
-            <li><a href="features.html">Features</a></li>         
+            <li><a href="#" class="active">Features</a></li>          
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -214,16 +281,49 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <div class="content-container">
+        <!-- Left side - Image placeholder -->
+        <div class="image-container">
+            <img src="images/alabaster-tall.png" alt="Vibeke Bertelsen artwork" />
+        </div>
+
+        <!-- Right side - Features content -->
+        <div class="features-content">
+            <h1 class="page-title">Features of Vibeke's work</h1>
+            <div class="year-section">
+                <div class="year">2025</div>
+                <div class="feature-item">Week long feature on Ai Art Magazine Instagram profile</div>
+                <div class="feature-item">The body in AI, talk, ADOS, Artifex Gallery, Paris</div>
+                <div class="feature-item">Untitled, video artwork, Edge City ATX, Austin, Texas</div>
+                <div class="feature-item">Untitled, video artwork, AI fusion in film, Berlin</div>
+                <div class="feature-item">Falling, short film, honorable mention, Project Odyssey Season 2</div>
+            </div>
+
+            <div class="year-section">
+                <div class="year">2024</div>
+                <div class="feature-item">Hands of Time, video artwork, honorable mention, Project Odyssey Season 1</div>
+                <div class="feature-item">Latent Walk, video artwork, Specialefestivalen, Copenhagen</div>
+            </div>
+
+            <div class="year-section">
+                <div class="year">2023</div>
+                <div class="sub-header">As a part of Vertigo artist studio</div>
+                <div class="feature-item">Vanitas/Residue, video artwork, The National Gallery, Copenhagen</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
-      <p style="margin-bottom:15px; font-size:12px; letter-spacing:3px; text-transform:uppercase;">
+      <p style="margin-bottom:15px; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family: Arial, sans-serif;">
         Vibeke Bertelsen (Udart)
       </p>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/_udart_" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.twitter.com/vibeke_udart" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="protected-email mail-icon"><i class="fas fa-envelope"></i></a>
-    </div>
+      <div class="social-icons">
+          <a href="https://www.instagram.com/_udart_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/vibeke_udart" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="protected-email mail-icon"><i class="fas fa-envelope"></i></a>
+      </div>
     </footer>
 
     <!-- Gradient Fade at Bottom -->
@@ -251,6 +351,7 @@
                 });
             });
         });
+
 
         ////////email obfuscation
          (function() {
@@ -407,6 +508,5 @@
           }
         })();        
     </script>
-
 </body>
 </html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeke Bertelsen (Udart) - Works</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
+            color: white;
+        }
+
+        .top-menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            z-index: 10;
+        }
+
+        .top-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .top-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-menu ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .top-menu ul li a.active {
+            background-color: white;
+            color: black;
+        }
+        
+        /* Hamburger menu icon */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 20;
+            position: absolute;
+            right: 20px;
+            top: 18px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Mobile menu styles */
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .top-menu {
+                justify-content: flex-start;
+                padding: 20px;
+                height: 60px;
+            }
+            
+            .top-menu ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 250px;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding-top: 60px;
+                transition: all 0.3s ease;
+                gap: 0;
+            }
+            
+            .top-menu ul.active {
+                right: 0;
+            }
+            
+            .top-menu ul li {
+                width: 100%;
+            }
+            
+            .top-menu ul li a {
+                display: block;
+                padding: 15px 20px;
+                width: 100%;
+                font-size: 16px;
+            }
+            
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+            
+            .videos-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .video-item {
+                width: 85% !important;
+                margin-bottom: 30px;
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 120px; /* Space for footer */
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .youtube-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .videos-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .video-item {
+            width: 30%;
+            margin: 0 10px;
+        }
+        
+        .vertical-video-wrapper {
+            position: relative;
+            padding-bottom: 177.78%; /* 9:16 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #111;
+        }
+        
+        .vertical-video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            background: linear-gradient(transparent, rgba(0,0,0,1));
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+        
+        .fade-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Menu -->
+    <nav class="top-menu">
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">Works</a></li>
+            <li><a href="features.html">Features</a></li>          
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <!-- First Section - YouTube Video -->
+        <h1 class="section-title">SOMA - short film</h1>
+        <div class="youtube-container">
+            <div class="video-wrapper">
+                <!-- Replace 'VIDEO_ID' with your actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/ke6DZxOaB3Y" title="SOMA - short film by Vibeke Bertelsen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Second Section - Short Experimental Videos -->
+        <h1 class="section-title">Selected short experimental videos</h1>
+        <div class="videos-container">
+            <div class="video-item">
+                <div class="vertical-video-wrapper">
+                    <!-- Replace src with your actual video file -->
+                    <video controls>
+                        <source src="videos/fractal-eyes-2025.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <div class="vertical-video-wrapper">
+                    <!-- Replace src with your actual video file -->
+                    <video controls>
+                        <source src="videos/dbl-exposure-2025.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <div class="vertical-video-wrapper">
+                    <!-- Replace src with your actual video file -->
+                    <video controls>
+                        <source src="videos/giant-woman-2025.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p style="margin-bottom:15px; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family: Arial, sans-serif;">
+        Vibeke Bertelsen (Udart)
+      </p>
+      <div class="social-icons">
+          <a href="https://www.instagram.com/_udart_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/vibeke_udart" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="protected-email-link"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+
+    <!-- Gradient Fade at Bottom -->
+    <div class="fade-bottom"></div>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menu = document.getElementById('menu');
+            
+            mobileMenu.addEventListener('click', function() {
+                this.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link (for mobile)
+            const menuLinks = document.querySelectorAll('#menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        mobileMenu.classList.remove('active');
+                        menu.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- JavaScript for email protection -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Email protection script
+            (function() {
+                // Email configuration
+                const emailConfig = {
+                    parts: [
+                        { value: 'info', encoding: 'reverse' },
+                        { value: '@', encoding: 'ascii' },
+                        { value: 'udart', encoding: 'shift' },
+                        { value: '.', encoding: 'entity' },
+                        { value: 'dk', encoding: 'base64' }
+                    ],
+                    targetClass: 'protected-email-link'
+                };
+
+                // Encoding functions
+                const encoders = {
+                    reverse: function(str) {
+                        return str.split('').reverse().join('');
+                    },
+                    
+                    ascii: function(str) {
+                        let result = '';
+                        for(let i = 0; i < str.length; i++) {
+                            result += str.charCodeAt(i) + (i < str.length - 1 ? ',' : '');
+                        }
+                        return result;
+                    },
+                    
+                    shift: function(str) {
+                        let result = '';
+                        for(let i = 0; i < str.length; i++) {
+                            result += String.fromCharCode(str.charCodeAt(i) + 3);
+                        }
+                        return result;
+                    },
+                    
+                    entity: function(str) {
+                        let result = '';
+                        for(let i = 0; i < str.length; i++) {
+                            result += '&#' + str.charCodeAt(i) + ';';
+                        }
+                        return result;
+                    },
+                    
+                    base64: function(str) {
+                        return btoa(str);
+                    }
+                };
+
+                // Decoding functions
+                const decoders = {
+                    reverse: function(str) {
+                        return str.split('').reverse().join('');
+                    },
+                    
+                    ascii: function(str) {
+                        return str.split(',').map(code => String.fromCharCode(parseInt(code))).join('');
+                    },
+                    
+                    shift: function(str) {
+                        let result = '';
+                        for(let i = 0; i < str.length; i++) {
+                            result += String.fromCharCode(str.charCodeAt(i) - 3);
+                        }
+                        return result;
+                    },
+                    
+                    entity: function(str) {
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = str;
+                        return tempDiv.textContent;
+                    },
+                    
+                    base64: function(str) {
+                        return atob(str);
+                    }
+                };
+
+                // Process and apply protection
+                function applyProtection() {
+                    // Encode email parts
+                    const encodedParts = emailConfig.parts.map(part => {
+                        return {
+                            value: encoders[part.encoding](part.value),
+                            encoding: part.encoding
+                        };
+                    });
+                    
+                    // Store as JSON
+                    const encodedData = JSON.stringify(encodedParts);
+                    
+                    // Find all protected email links
+                    const links = document.querySelectorAll('.' + emailConfig.targetClass);
+                    
+                    links.forEach(link => {
+                        // Store encoded data
+                        link.setAttribute('data-encoded-email', encodedData);
+                        
+                        // Add click handler
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            
+                            // Decode the email
+                            try {
+                                const parts = JSON.parse(this.getAttribute('data-encoded-email'));
+                                const email = parts.map(part => decoders[part.encoding](part.value)).join('');
+                                
+                                // Open email client
+                                window.location.href = 'mailto:' + email;
+                            } catch (err) {
+                                console.error('Error decoding email:', err);
+                            }
+                        });
+                        
+                        // Set title attribute for tooltip
+                        link.title = 'Send us an email';
+                    });
+                }
+
+                // Run when DOM is loaded
+                applyProtection();
+            })();
+        });
+    </script>
+</body>
+</html>

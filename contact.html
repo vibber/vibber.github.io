@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibeke Bertelsen (Udart)</title>
+    <title>Vibeke Bertelsen (Udart) - About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -14,19 +14,9 @@
 
         body, html {
             height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
             color: white;
-        }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
         }
 
         .top-menu {
@@ -38,13 +28,6 @@
             justify-content: center;
             padding: 15px;
             z-index: 10;
-        }
-
-        @media screen and (max-width: 768px) {
-            .top-menu {
-                padding: 20px;
-                height: 60px;
-            }
         }
 
         .top-menu ul {
@@ -68,51 +51,11 @@
             color: black;
         }
 
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            font-size: 12px;
-            letter-spacing: 1px;
-            background: linear-gradient(transparent, rgba(0,0,0,1));
-        }
-
-        .social-icons {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 16px;
-        }
-
-        .fade-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-            z-index: -1;
+        .top-menu ul li a.active {
+            background-color: white;
+            color: black;
         }
         
-        .social-icons a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #1da1f2; /* Example hover color */
-        }
-
         /* Hamburger menu icon */
         .menu-toggle {
             display: none;
@@ -144,7 +87,8 @@
             
             .top-menu {
                 justify-content: flex-start;
-                padding-left: 20px;
+                padding: 20px;
+                height: 60px;
             }
             
             .top-menu ul {
@@ -186,26 +130,146 @@
             .menu-toggle.active span:nth-child(3) {
                 transform: translateY(-9px) rotate(-45deg);
             }
+            
+            .content-container {
+                flex-direction: column;
+                padding-top: 80px;
+            }
+            
+            .about-content, .images-container {
+                width: 100%;
+            }
+            
+            .images-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .image-item {
+                width: 100%;
+                margin-bottom: 15px;
+            }
         }
 
+        .content-container {
+            display: flex;
+            padding-top: 60px; /* Reduced top margin */
+            height: calc(100vh - 160px); /* Account for menu and footer */
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 15px; /* Further reduced margin */
+        }
+
+        .about-content {
+            flex: 1;
+            padding: 40px;
+            padding-top: 0;
+            overflow-y: auto;
+            line-height: 1.6;
+        }
+        
+        .about-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 16px;
+            margin: 20px 0;
+            padding-left: 15px;
+            border-left: 2px solid white;
+        }
+
+        .images-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            padding-top: 68px; /* Align with first line of text */
+            padding-bottom: 180px;
+            overflow: hidden;
+        }
+        
+        .image-item {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .image-item img {
+            max-width: 90%;
+            max-height: calc(45vh - 140px); /* Half height for two images */
+            object-fit: contain;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            background: linear-gradient(transparent, rgba(0,0,0,1));
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+        
+        .fade-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video class="video-background" autoplay muted loop playsinline>
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     <!-- Top Menu -->
     <nav class="top-menu">
         <ul id="menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="works.html">Works</a></li>
             <li><a href="features.html">Features</a></li>         
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="#" class="active">Contact</a></li>
         </ul>
         <div class="menu-toggle" id="mobile-menu">
             <span></span>
@@ -214,16 +278,38 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <div class="content-container">
+        <!-- Left side - About content -->
+        <div class="about-content">
+            <h1 class="page-title">Contact Vibeke</h1>
+            
+            <div class="about-text">
+                Don't hesitate to reach out. The preferred way to get in touch is per mail.
+            </div>
+            <div>
+                <span class="protected-email">JavaScript is required to view this email address</span>
+            </div>
+        </div>
+
+        <!-- Right side - Images -->
+        <div class="images-container">
+            <div class="image-item">
+                <img src="/images/buste.png" alt="Udart artwork sample" />
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
-      <p style="margin-bottom:15px; font-size:12px; letter-spacing:3px; text-transform:uppercase;">
+      <p style="margin-bottom:15px; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family: Arial, sans-serif;">
         Vibeke Bertelsen (Udart)
       </p>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/_udart_" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.twitter.com/vibeke_udart" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="protected-email mail-icon"><i class="fas fa-envelope"></i></a>
-    </div>
+      <div class="social-icons">
+          <a href="https://www.instagram.com/_udart_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/vibeke_udart" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="protected-email mail-icon"><i class="fas fa-envelope"></i></a>
+      </div>
     </footer>
 
     <!-- Gradient Fade at Bottom -->
@@ -405,8 +491,7 @@
           } else {
             processElements();
           }
-        })();        
+        })();
     </script>
-
 </body>
 </html>
