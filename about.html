@@ -131,38 +131,45 @@
                 transform: translateY(-9px) rotate(-45deg);
             }
             
-            /* Changes for mobile content layout */
+            /* Critical fixes for content layout - use !important to override */
             .content-container {
-                flex-direction: column;
-                padding-top: 80px;
-                height: auto; /* Remove fixed height constraint */
-                overflow: visible; /* Allow content to flow naturally */
+                flex-direction: column !important;
+                padding-top: 80px !important;
+                height: auto !important; /* Override any height constraint */
+                min-height: unset !important;
+                overflow: visible !important;
+                display: block !important; /* Change from flex to block for mobile */
             }
             
             .about-content {
-                width: 100%;
-                padding: 20px;
-                height: auto; /* Remove any height constraints */
-                overflow: visible; /* Remove scroll from text container */
+                width: 100% !important;
+                height: auto !important;
+                overflow: visible !important; /* Force no scrollbar */
+                padding: 20px !important;
+                flex: none !important; /* Remove flex sizing */
+                position: relative !important;
+                display: block !important;
             }
             
             .images-container {
-                width: 100%;
-                padding: 20px;
-                height: auto; /* Remove height constraints */
-                overflow: visible;
-                padding-top: 0; /* Remove top padding that was aligning with text */
-                padding-bottom: 80px; /* Provide space before footer */
+                width: 100% !important;
+                padding: 20px !important;
+                height: auto !important;
+                overflow: visible !important;
+                padding-top: 0 !important;
+                padding-bottom: 80px !important;
+                flex: none !important; /* Remove flex sizing */
+                position: relative !important;
             }
             
             .image-item {
-                width: 100%;
-                margin-bottom: 20px;
+                width: 100% !important;
+                margin-bottom: 20px !important;
             }
             
             .image-item img {
-                max-width: 100%;
-                max-height: none; /* Remove height constraint */
+                max-width: 100% !important;
+                max-height: none !important;
             }
         }
 
