@@ -1,12 +1,4 @@
-        .fade-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-            z-index: -1;
-        }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,65 +81,114 @@
         
         /* Mobile menu styles */
         @media screen and (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-            
-            .top-menu {
-                justify-content: flex-start;
-                padding: 20px;
-                height: 60px;
-            }
-            
-            .top-menu ul {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 250px;
-                flex-direction: column;
-                background-color: rgba(0, 0, 0, 0.9);
-                padding-top: 60px;
-                transition: all 0.3s ease;
-                gap: 0;
-            }
-            
-            .top-menu ul.active {
-                right: 0;
-            }
-            
-            .top-menu ul li {
-                width: 100%;
-            }
-            
-            .top-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                width: 100%;
-                font-size: 16px;
-            }
-            
-            .menu-toggle.active span:nth-child(1) {
-                transform: translateY(9px) rotate(45deg);
-            }
-            
-            .menu-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .menu-toggle.active span:nth-child(3) {
-                transform: translateY(-9px) rotate(-45deg);
-            }
-            
-            .content-container {
-                flex-direction: column;
-                padding-top: 80px;
-            }
-            
-            .image-container, .features-content {
-                width: 100%;
-            }
-        }
+    /* Menu toggle styles */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .top-menu {
+        justify-content: flex-start;
+        padding: 20px;
+        height: 60px;
+    }
+    
+    .top-menu ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-top: 60px;
+        transition: all 0.3s ease;
+        gap: 0;
+    }
+    
+    .top-menu ul.active {
+        right: 0;
+    }
+    
+    .top-menu ul li {
+        width: 100%;
+    }
+    
+    .top-menu ul li a {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Content reordering for mobile */
+    .content-container {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: unset !important;
+        overflow: visible !important;
+        padding-top: 80px !important;
+    }
+    
+    /* Force features-content (text) to appear first */
+    .features-content {
+        order: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Force image-container to appear second */
+    .image-container {
+        order: 2 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding: 20px !important;
+        padding-bottom: 80px !important;
+        display: block !important;
+    }
+    
+    .image-container img {
+        max-width: 100% !important;
+        max-height: none !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Add these rules outside the media query to ensure they apply */
+@media screen and (max-width: 768px) {
+    /* Completely disable scrolling on content elements */
+    .features-content::-webkit-scrollbar,
+    .image-container::-webkit-scrollbar {
+        width: 0 !important;
+        display: none !important;
+    }
+    
+    /* Additional force for order */
+    body .content-container .features-content {
+        order: 1 !important;
+    }
+    
+    body .content-container .image-container {
+        order: 2 !important;
+    }
+}
 
         .content-container {
             display: flex;
