@@ -131,23 +131,38 @@
                 transform: translateY(-9px) rotate(-45deg);
             }
             
+            /* Changes for mobile content layout */
             .content-container {
                 flex-direction: column;
                 padding-top: 80px;
+                height: auto; /* Remove fixed height constraint */
+                overflow: visible; /* Allow content to flow naturally */
             }
             
-            .about-content, .images-container {
+            .about-content {
                 width: 100%;
+                padding: 20px;
+                height: auto; /* Remove any height constraints */
+                overflow: visible; /* Remove scroll from text container */
             }
             
             .images-container {
-                display: flex;
-                flex-direction: column;
+                width: 100%;
+                padding: 20px;
+                height: auto; /* Remove height constraints */
+                overflow: visible;
+                padding-top: 0; /* Remove top padding that was aligning with text */
+                padding-bottom: 80px; /* Provide space before footer */
             }
             
             .image-item {
                 width: 100%;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .image-item img {
+                max-width: 100%;
+                max-height: none; /* Remove height constraint */
             }
         }
 
