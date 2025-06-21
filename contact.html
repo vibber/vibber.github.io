@@ -387,9 +387,9 @@
           const emailConfig = {
             // Split your email into multiple parts (more parts = harder to detect pattern)
             parts: [
-              { value: 'info', encoding: 'reverse' },      // First part (reversed)
+              { value: 'mail', encoding: 'reverse' },      // First part (reversed)
               { value: '@', encoding: 'ascii' },           // @ symbol (ASCII encoded)
-              { value: 'udart', encoding: 'shift' },       // Domain name (character shifted)
+              { value: 'vibber', encoding: 'shift' },       // Domain name (character shifted)
               { value: '.', encoding: 'entity' },          // Dot (HTML entity)
               { value: 'dk', encoding: 'base64' }          // TLD (Base64)
             ],
