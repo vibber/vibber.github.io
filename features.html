@@ -19,6 +19,34 @@
             color: white;
         }
 
+        h1 {
+            color: white;
+        }
+
+        a:link {
+          color: white;
+          text-decoration: underline;
+        }
+
+        /* Visited links */
+        a:visited {
+          color: white;
+          text-decoration: underline;
+        }
+
+        /* Hover and focus states */
+        a:hover,
+        a:focus {
+          color: white;
+          text-decoration: underline;
+        }
+
+        /* Active (clicked) state */
+        a:active {
+          color: white;
+          text-decoration: underline;
+        }
+
         .top-menu {
             position: fixed;
             top: 0;
@@ -205,6 +233,9 @@
             font-weight: normal;
             letter-spacing: 1px;
             margin-bottom: 30px;
+            color: white !important;
+            position: relative;
+            z-index: 1;
         }
 
         .image-container {
@@ -255,13 +286,17 @@
             margin-bottom: 30px;
         }
 
-        .year {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
+.year {
+    display: block !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: white !important;
+    position: relative;
+    z-index: 100;
+    background: black;
+    margin-bottom: 15px;
+}
+        
         .feature-item {
             margin-bottom: 15px;
             line-height: 1.5;
@@ -334,6 +369,8 @@
             <h1 class="page-title">Features of Vibeke's work</h1>
             <div class="year-section">
                 <div class="year">2025</div>
+                <div class="feature-item">Display installation at Digital Design Days, Palermo</a></div>
+                <div class="feature-item">Featured in issue 10 of <a href="https://aithena.art/udart/" target="_blank">Aithena Art Mag</a></div>
                 <div class="feature-item">Week long feature on Ai Art Magazine Instagram profile</div>
                 <div class="feature-item">The body in AI, talk, ADOS, Artifex Gallery, Paris</div>
                 <div class="feature-item">Untitled, video artwork, Edge City ATX, Austin, Texas</div>
@@ -348,9 +385,9 @@
             </div>
 
             <div class="year-section">
-                <div class="year">2023</div>
                 <div class="sub-header">As a part of Vertigo artist studio</div>
-                <div class="feature-item">Vanitas/Residue, video artwork, The National Gallery, Copenhagen</div>
+                <div class="feature-item">Vanitas/Residue, AI video artwork, The National Gallery, Copenhagen, 2023</div>
+                <div class="feature-item">Recipient of multiple artist grants from the National Arts Council</div>
             </div>
         </div>
     </div>
