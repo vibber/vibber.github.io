@@ -78,6 +78,391 @@
             border-radius: 2px;
             transition: all 0.3s ease;
         }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            width: 95%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding-bottom: 120px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin: 60px 0 10px 0;  /* Changed this line */
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .section-info {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            margin: 0 0 40px 0;
+            letter-spacing: 0.5px;
+            display: block;
+            line-height: 1.4;
+        }
+
+        /* Portfolio section ensures full width */
+        .portfolio-section {
+            margin-bottom: 80px;
+            width: 100%;
+        }
+
+        /* Media containers */
+        .media-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .media-item {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .media-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .media-item img:hover {
+            opacity: 0.8;
+        }
+
+        /* Video styles */
+        .video-main {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            flex: 1;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: #111;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            pointer-events: none; /* Prevent video controls from intercepting clicks */
+        }
+
+        /* YouTube thumbnail wrapper styles */
+        .youtube-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: #111;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .youtube-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Video thumbnail overlay to ensure clicks go to lightbox */
+        .video-wrapper::after,
+        .youtube-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        .video-wrapper:hover::after,
+        .youtube-wrapper:hover::after {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Play button overlay for video thumbnails */
+        .video-wrapper::before,
+        .youtube-wrapper::before {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .video-wrapper:hover::before,
+        .youtube-wrapper:hover::before {
+            transform: translate(-50%, -50%) scale(1.1);
+            color: rgba(255, 255, 255, 1);
+        }
+
+        /* Image grid layouts - optimized for larger displays */
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .image-grid.grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+        }
+
+        .image-grid.grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 1400px;
+        }
+
+        .image-grid.grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 900px;
+        }
+
+        .image-grid.grid-1 {
+            grid-template-columns: 1fr;
+            max-width: 700px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        /* Mixed content layout */
+        .mixed-content {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        /* Ensure grids align nicely beside the video */
+        .mixed-content .image-grid {
+            margin: 0;
+            max-width: 100%;
+            flex: 1;
+        }
+        
+        /* Semi Displacement - uniform height for video and images */
+        .mixed-content .video-main {
+            flex: 0 0 auto;
+            width: auto;
+        }
+        
+        .mixed-content .video-wrapper {
+            position: relative;
+            height: 350px;
+            width: 260px;
+        }
+        
+        .mixed-content .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .mixed-content .image-grid img {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Lightbox Modal Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-media {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* YouTube iframe styles for lightbox */
+        .lightbox-youtube {
+            width: 90vw;
+            height: 50.625vw; /* 16:9 aspect ratio */
+            max-height: 90vh;
+            max-width: 160vh; /* Maintain 16:9 when height constrained */
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+            transition: color 0.3s ease;
+            user-select: none;
+        }
+
+        .lightbox-close:hover {
+            color: #ccc;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ccc;
+        }
+
+        .lightbox-prev {
+            left: 30px;
+        }
+
+        .lightbox-next {
+            right: 30px;
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            background: linear-gradient(transparent, rgba(0,0,0,1));
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+        
+        .fade-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            z-index: -1;
+        }
+
+        /* Adjust for medium screens */
+        @media screen and (max-width: 1200px) {
+            .image-grid.grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .image-grid.grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
         
         /* Mobile menu styles */
         @media screen and (max-width: 768px) {
@@ -131,130 +516,93 @@
                 transform: translateY(-9px) rotate(-45deg);
             }
             
-            .videos-container {
-                flex-direction: column;
+            .media-row {
+                flex-direction: column !important;
                 align-items: center;
             }
             
-            .video-item {
+            .media-item {
                 width: 85% !important;
-                margin-bottom: 30px;
+                margin: 15px 0 !important;
             }
-        }
 
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            padding-top: 60px;
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-bottom: 120px; /* Space for footer */
-        }
-        
-        .section-title {
-            font-size: 28px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: normal;
-            letter-spacing: 1px;
-            margin: 40px 0 20px 0;
-            text-align: center;
-        }
+            .image-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 10px !important;
+                max-width: 90% !important;
+            }
 
-        .youtube-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto 40px auto;
-        }
-        
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-        }
-        
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+            .video-main {
+                width: 85% !important;
+            }
 
-        .videos-container {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin: 0 auto;
-        }
-        
-        .video-item {
-            width: 30%;
-            margin: 0 10px;
-        }
-        
-        .vertical-video-wrapper {
-            position: relative;
-            padding-bottom: 177.78%; /* 9:16 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            background-color: #111;
-        }
-        
-        .vertical-video-wrapper video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+            /* Stack Semi Displacement on mobile */
+            .mixed-content {
+                flex-direction: column !important;
+                gap: 20px !important;
+                align-items: center;
+            }
+            
+            .mixed-content .video-main {
+                max-width: 85% !important;
+                width: 85% !important;
+            }
+            
+            .mixed-content .video-wrapper {
+                width: 100% !important;
+                height: auto !important;
+                padding-bottom: 134.7% !important;
+            }
+            
+            .mixed-content .video-wrapper video {
+                position: absolute !important;
+                top: 0;
+                left: 0;
+                max-height: none !important;
+                width: 100% !important;
+            }
+            
+            .mixed-content .image-grid img {
+                height: auto !important;
+            }
+            
+            /* Stack Gender Unknown text on mobile */
+            .mixed-content > div {
+                max-width: 90% !important;
+                padding: 0 !important;
+            }
 
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            font-size: 12px;
-            letter-spacing: 1px;
-            background: linear-gradient(transparent, rgba(0,0,0,1));
-        }
+            /* Lightbox mobile adjustments */
+            .lightbox-close {
+                top: 10px;
+                right: 20px;
+                font-size: 30px;
+            }
 
-        .social-icons {
-            margin-bottom: 10px;
-        }
+            .lightbox-nav {
+                font-size: 24px;
+                padding: 15px 12px;
+            }
 
-        .footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 16px;
-        }
+            .lightbox-prev {
+                left: 10px;
+            }
 
-        .social-icons a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
+            .lightbox-next {
+                right: 10px;
+            }
 
-        .social-icons a:hover {
-            color: #1da1f2;
-        }
-        
-        .fade-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-            z-index: -1;
+            .lightbox-counter {
+                bottom: 10px;
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            /* YouTube iframe mobile adjustments */
+            .lightbox-youtube {
+                width: 95vw;
+                height: 53.4375vw; /* 16:9 aspect ratio */
+            }
         }
     </style>
 </head>
@@ -276,117 +624,136 @@
         </div>
     </nav>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightbox-close">&times;</span>
+            <span class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</span>
+            <span class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</span>
+            <img id="lightbox-img" class="lightbox-media" style="display: none;">
+            <video id="lightbox-video" class="lightbox-media" controls style="display: none;"></video>
+            <iframe id="lightbox-youtube" class="lightbox-youtube" style="display: none;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <div class="content-container">
-        <!-- First Section - YouTube Video -->
-        <h1 class="section-title">SOMA - short film</h1>
-        <div class="youtube-container">
-            <div class="video-wrapper">
-                <!-- Replace 'VIDEO_ID' with your actual YouTube video ID -->
-                <iframe src="https://www.youtube.com/embed/ke6DZxOaB3Y" title="SOMA - short film by Vibeke Bertelsen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <!-- Halo Soft Thing Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Halo Soft Thing</h1>
+            <p class="section-info">1 looping video and 2 digital images, 2025</p>
+            <div class="image-grid grid-3">
+                <div class="video-wrapper" data-lightbox="halo-soft-thing" data-video-src="portfolio/01-halo-soft-thing/video.mp4">
+                    <video muted poster="portfolio/01-halo-soft-thing/image01.png">
+                        <source src="portfolio/01-halo-soft-thing/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <img src="portfolio/01-halo-soft-thing/image01.png" alt="Halo Soft Thing 1" data-lightbox="halo-soft-thing">
+                <img src="portfolio/01-halo-soft-thing/image02.png" alt="Halo Soft Thing 2" data-lightbox="halo-soft-thing">
             </div>
         </div>
 
-        <!-- Second Section - Short Experimental Videos -->
-        <h1 class="section-title">Selected short experimental videos</h1>
+        <!-- Memento Mori Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Memento Mori</h1>
+            <p class="section-info">4 digital images, 2025</p>
+            <div class="image-grid grid-4">
+                <img src="portfolio/02-memento-mori/image01.png" alt="Memento Mori 1" data-lightbox="memento-mori">
+                <img src="portfolio/02-memento-mori/image02.png" alt="Memento Mori 2" data-lightbox="memento-mori">
+                <img src="portfolio/02-memento-mori/image03.png" alt="Memento Mori 3" data-lightbox="memento-mori">
+                <img src="portfolio/02-memento-mori/image04.png" alt="Memento Mori 4" data-lightbox="memento-mori">
+            </div>
+        </div>
 
-        <div class="videos-container">
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video file -->
-                    <video controls playsinline poster="thumbnails/fractal-eyes-2025.jpg">
-                        <source src="videos/fractal-eyes-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+        <!-- Untitled (hand drawn details) Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Untitled (hand drawn details)</h1>
+            <p class="section-info">Print on paper with pen drawing, 2025</p>
+            <div class="image-grid grid-3">
+                <img src="portfolio/03-hand-drawn/artwork.png" alt="Hand Drawn Artwork" data-lightbox="hand-drawn">
+                <img src="portfolio/03-hand-drawn/detail.png" alt="Hand Drawn Detail" data-lightbox="hand-drawn">
+                <img src="portfolio/03-hand-drawn/pen-and-paper.png" alt="Pen and Paper" data-lightbox="hand-drawn">
             </div>
-            
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video  file -->
-                    <video controls playsinline poster="thumbnails/dbl-exposure-2025.jpg">
-                        <source src="videos/dbl-exposure-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+        </div>
+
+        <!-- Mustache and Hands Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Mustache and Hands</h1>
+            <p class="section-info">4 digital images, 2025</p>
+            <div class="image-grid grid-4">
+                <img src="portfolio/04-mustache-and-hands/image01.png" alt="Mustache and Hands 1" data-lightbox="mustache-hands">
+                <img src="portfolio/04-mustache-and-hands/image02.png" alt="Mustache and Hands 2" data-lightbox="mustache-hands">
+                <img src="portfolio/04-mustache-and-hands/image03.png" alt="Mustache and Hands 3" data-lightbox="mustache-hands">
+                <img src="portfolio/04-mustache-and-hands/image04.png" alt="Mustache and Hands 4" data-lightbox="mustache-hands">
             </div>
-            
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video  file -->
-                    <video controls playsinline poster="thumbnails/touchdesigner-glitch-2025.jpg">
-                        <source src="videos/touchdesigner-glitch-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+        </div>
+
+        <!-- Væsen Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Væsen</h1>
+            <p class="section-info">4 digital images, 2025</p>
+            <div class="image-grid grid-4">
+                <img src="portfolio/05-vaesen/image01.png" alt="Vaesen 1" data-lightbox="vaesen">
+                <img src="portfolio/05-vaesen/image02.jpg" alt="Vaesen 2" data-lightbox="vaesen">
+                <img src="portfolio/05-vaesen/image03.png" alt="Vaesen 3" data-lightbox="vaesen">
+                <img src="portfolio/05-vaesen/image04.jpg" alt="Vaesen 4" data-lightbox="vaesen">
+            </div>
+        </div>
+
+        <!-- Soma Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Soma</h1>
+            <p class="section-info">Short film, 2025</p>
+            <div class="image-grid grid-1">
+                <div class="youtube-wrapper" data-lightbox="soma" data-youtube-id="ke6DZxOaB3Y">
+                    <img src="https://img.youtube.com/vi/ke6DZxOaB3Y/maxresdefault.jpg" alt="Soma Video">
                 </div>
             </div>
         </div>
 
-        <!------>
-        <div class="videos-container">
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video file -->
-                    <video controls playsinline poster="thumbnails/dss-circle-2025.jpg">
-                        <source src="videos/dss-circle-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+        <!-- Semi Displacement Section with uniform height -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Semi Displacement</h1>
+            <p class="section-info">1 looping video and 3 digital images, 2024</p>
+            <div class="mixed-content">
+                <div class="video-main">
+                    <div class="video-wrapper" data-lightbox="semi-displacement" data-video-src="portfolio/07-semi-displacement/video.mp4">
+                        <video muted poster="portfolio/07-semi-displacement/image01.png">
+                            <source src="portfolio/07-semi-displacement/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video  file -->
-                    <video controls playsinline poster="thumbnails/midjourney-bust-2025.jpg">
-                        <source src="videos/midjourney-bust-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video  file -->
-                    <video controls playsinline poster="thumbnails/giant-woman-2025.jpg">
-                        <source src="videos/giant-woman-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="image-grid grid-3">
+                    <img src="portfolio/07-semi-displacement/image01.png" alt="Semi Displacement 1" data-lightbox="semi-displacement">
+                    <img src="portfolio/07-semi-displacement/image02.png" alt="Semi Displacement 2" data-lightbox="semi-displacement">
+                    <img src="portfolio/07-semi-displacement/image03.png" alt="Semi Displacement 3" data-lightbox="semi-displacement">
                 </div>
             </div>
         </div>
 
-        <!-------->
-        <div class="videos-container">
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video file -->
-                    <video controls playsinline poster="thumbnails/touchdesigner-hands-2025.jpg">
-                        <source src="videos/touchdesigner-hands-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+        <!-- Gender Unknown Section with text -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Gender Unknown</h1>
+            <p class="section-info">Instagram profile, 2024</p>
+            <div class="mixed-content">
+                <div style="flex: 1; max-width: 300px;">
+                    <img src="portfolio/08-genderunknown/screenshot.png" alt="Gender Unknown Screenshot" style="width: 100%; height: auto; border-radius: 4px; cursor: pointer;" data-lightbox="gender-unknown">
                 </div>
-            </div>
-            
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video  file -->
-                    <video controls playsinline poster="thumbnails/alabaster-hands-2025.jpg">
-                        <source src="videos/alabaster-hands-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            
-            <div class="video-item">
-                <div class="vertical-video-wrapper">
-                    <!-- Replace src with your actual video  file -->
-                    <video controls playsinline poster="thumbnails/fast-edit-faces-2025.jpg">
-                        <source src="videos/fast-edit-faces-2025.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div style="flex: 1; max-width: 700px; padding: 0 20px;">
+                    <p style="font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 20px;">
+                        In 2024, as image-generating AI tools surged in popularity, I began an investigative project with a simple but pressing question: How does AI depict LGBT+ people and other gender minorities? Using identical prompts across five major platforms, I compared how these systems “imagined” queer and trans identities.
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 20px;">
+                        The results became an Instagram-based archive of generated images paired with my reflections. While no longer active, the account serves as a time capsule, documenting the biases and blind spots of early generative AI. It records how machine systems often reduced complex identities to clichés, distortions, or invisibility.
+                    </p>
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- Footer -->
@@ -424,6 +791,171 @@
                         menu.classList.remove('active');
                     }
                 });
+            });
+        });
+    </script>
+    
+    <!-- Lightbox JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            const lightboxYoutube = document.getElementById('lightbox-youtube');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const lightboxPrev = document.getElementById('lightbox-prev');
+            const lightboxNext = document.getElementById('lightbox-next');
+            const lightboxCounter = document.getElementById('lightbox-counter');
+            
+            let currentGroup = [];
+            let currentIndex = 0;
+            let currentGroupName = '';
+            
+            // Get all media elements with data-lightbox attribute
+            const mediaElements = document.querySelectorAll('[data-lightbox]');
+            
+            // Group media by data-lightbox value
+            const mediaGroups = {};
+            mediaElements.forEach(element => {
+                const groupName = element.getAttribute('data-lightbox');
+                if (!mediaGroups[groupName]) {
+                    mediaGroups[groupName] = [];
+                }
+                mediaGroups[groupName].push(element);
+            });
+            
+            // Add click event listeners to all media elements
+            mediaElements.forEach(element => {
+                // Special handling for video wrappers and YouTube wrappers
+                if (element.classList.contains('video-wrapper') || element.classList.contains('youtube-wrapper')) {
+                    element.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openLightbox(this);
+                    });
+                } else {
+                    element.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        openLightbox(this);
+                    });
+                }
+            });
+            
+            function openLightbox(element) {
+                const groupName = element.getAttribute('data-lightbox');
+                currentGroup = mediaGroups[groupName];
+                currentGroupName = groupName;
+                currentIndex = currentGroup.indexOf(element);
+                
+                showMedia();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
+                // Pause videos when closing
+                if (lightboxVideo.style.display !== 'none') {
+                    lightboxVideo.pause();
+                }
+                
+                // Stop YouTube video when closing
+                if (lightboxYoutube.style.display !== 'none') {
+                    lightboxYoutube.src = '';
+                }
+            }
+            
+            function showMedia() {
+                const currentMedia = currentGroup[currentIndex];
+                const isVideoWrapper = currentMedia.classList.contains('video-wrapper');
+                const isYouTubeWrapper = currentMedia.classList.contains('youtube-wrapper');
+                
+                // Hide all media elements first
+                lightboxImg.style.display = 'none';
+                lightboxVideo.style.display = 'none';
+                lightboxYoutube.style.display = 'none';
+                
+                if (isVideoWrapper) {
+                    // Show video from video wrapper
+                    const videoSrc = currentMedia.getAttribute('data-video-src');
+                    lightboxVideo.src = videoSrc;
+                    lightboxVideo.style.display = 'block';
+                    lightboxVideo.load();
+                    // Auto-play video when opened in lightbox
+                    lightboxVideo.play();
+                } else if (isYouTubeWrapper) {
+                    // Show YouTube video
+                    const youtubeId = currentMedia.getAttribute('data-youtube-id');
+                    lightboxYoutube.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+                    lightboxYoutube.style.display = 'block';
+                } else if (currentMedia.tagName.toLowerCase() === 'img') {
+                    // Show image
+                    lightboxImg.src = currentMedia.src;
+                    lightboxImg.alt = currentMedia.alt;
+                    lightboxImg.style.display = 'block';
+                }
+                
+                // Update counter
+                lightboxCounter.textContent = `${currentIndex + 1} / ${currentGroup.length}`;
+                
+                // Show/hide navigation arrows
+                lightboxPrev.style.display = currentGroup.length > 1 ? 'block' : 'none';
+                lightboxNext.style.display = currentGroup.length > 1 ? 'block' : 'none';
+            }
+            
+            function navigateToIndex(index) {
+                if (index < 0) index = currentGroup.length - 1;
+                if (index >= currentGroup.length) index = 0;
+                
+                // Pause current video if playing
+                if (lightboxVideo.style.display !== 'none') {
+                    lightboxVideo.pause();
+                }
+                
+                // Stop current YouTube video if playing
+                if (lightboxYoutube.style.display !== 'none') {
+                    lightboxYoutube.src = '';
+                }
+                
+                currentIndex = index;
+                showMedia();
+            }
+            
+            // Event listeners
+            lightboxClose.addEventListener('click', closeLightbox);
+            
+            lightboxPrev.addEventListener('click', function() {
+                navigateToIndex(currentIndex - 1);
+            });
+            
+            lightboxNext.addEventListener('click', function() {
+                navigateToIndex(currentIndex + 1);
+            });
+            
+            // Close lightbox when clicking outside the media
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (!lightbox.classList.contains('active')) return;
+                
+                switch(e.key) {
+                    case 'Escape':
+                        closeLightbox();
+                        break;
+                    case 'ArrowLeft':
+                        navigateToIndex(currentIndex - 1);
+                        break;
+                    case 'ArrowRight':
+                        navigateToIndex(currentIndex + 1);
+                        break;
+                }
             });
         });
     </script>
@@ -557,3 +1089,4 @@
     </script>
 </body>
 </html>
+                    
