@@ -221,7 +221,7 @@
         .content-container {
             display: flex;
             padding-top: 100px; /* Increased top margin */
-            height: calc(100vh - 160px); /* Account for menu and footer */
+            padding-bottom: 200px; /* Add bottom padding for footer space */
             width: 90%;
             max-width: 1100px;
             margin: 0 auto;
@@ -236,6 +236,27 @@
             color: white !important;
             position: relative;
             z-index: 1;
+        }
+
+        /* New style for the Vertigo header to match page-title */
+        .vertigo-header {
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: white !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* New style for the date range under Vertigo header */
+        .date-range {
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            color: #ccc;
+            margin-bottom: 30px;
         }
 
         .image-container {
@@ -272,7 +293,6 @@
             flex: 1;
             padding: 40px;
             padding-top: 0;
-            overflow-y: auto;
         }
         
         .sub-header {
@@ -286,16 +306,31 @@
             margin-bottom: 30px;
         }
 
-.year {
-    display: block !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    color: white !important;
-    position: relative;
-    z-index: 100;
-    background: black;
-    margin-bottom: 15px;
-}
+        .year {
+            display: block !important;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            color: white !important;
+            position: relative;
+            z-index: 100;
+            background: black;
+            margin-bottom: 15px;
+        }
+
+        /* Add consistent spacing above years that come after the first one in each section */
+        .year-section .year:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        /* Special handling for years that come after the date-range */
+        .date-range + .year {
+            margin-top: 0; /* Reset top margin for the first year after date range */
+        }
+
+        /* Ensure years after feature items have proper spacing */
+        .feature-item + .year {
+            margin-top: 30px;
+        }
         
         .feature-item {
             margin-bottom: 15px;
@@ -346,7 +381,7 @@
         <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="works.html">Works</a></li>
-            <li><a href="#" class="active">Features</a></li>          
+            <li><a href="#" class="active">CV</a></li>          
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -366,29 +401,43 @@
 
         <!-- Right side - Features content -->
         <div class="features-content">
-            <h1 class="page-title">Features of Vibeke's work</h1>
+            <h1 class="page-title">CV of Vibeke's work</h1>
             <div class="year-section">
                 <div class="year">2025</div>
+                <div class="feature-item">Screening Soma short film, Simultan Festival, Timișoara, Romania</div>
+                <div class="feature-item">Double page feature in AI art Magazine #2</div>
                 <div class="feature-item">Feature in Prompt Magazine #15</div>
                 <div class="feature-item">Article in <a href="https://4me4you.org/artist-_udart_" target="_blank">4me4you art magazine</a></div>
                 <div class="feature-item">Display installation at Digital Design Days, Palermo</div>
-                <div class="feature-item">Featured in issue 10 of <a href="https://aithena.art/udart/" target="_blank">Aithena Art Mag</a></div>
+                <div class="feature-item">Featured in #10 of <a href="https://aithena.art/udart/" target="_blank">Aithena Art Mag</a></div>
                 <div class="feature-item">Week long feature on Ai Art Magazine Instagram profile</div>
                 <div class="feature-item">The body in AI, talk, ADOS, Artifex Gallery, Paris</div>
                 <div class="feature-item">Untitled, video artwork, Edge City ATX, Austin, Texas</div>
                 <div class="feature-item">Untitled, video artwork, AI fusion in film, Berlin</div>
                 <div class="feature-item">Falling, short film, honorable mention, Project Odyssey Season 2</div>
-            </div>
 
-            <div class="year-section">
                 <div class="year">2024</div>
                 <div class="feature-item">Hands of Time, video artwork, honorable mention, Project Odyssey Season 1</div>
                 <div class="feature-item">Latent Walk, video artwork, Specialefestivalen, Copenhagen</div>
             </div>
 
             <div class="year-section">
-                <div class="sub-header">As a part of Vertigo artist studio</div>
-                <div class="feature-item">Vanitas/Residue, AI video artwork, The National Gallery, Copenhagen, 2023</div>
+                <h2 class="vertigo-header">As a part of Vertigo artist studio</h2>
+                <div class="date-range">2010 - present</div>
+                
+                <div class="year">2025</div>
+                <div class="feature-item">Melodrama 2, video projections for theatre, The Royal Danish Academy of Music, Copenhagen</div>
+                
+                <div class="year">2024</div>
+                <div class="feature-item">Oh Land, video projections for concert, The National Gallery, Copenhagen</div>
+                
+                <div class="year">2023</div>
+                <div class="feature-item">Vanitas/Residue, video art installation, The National Gallery, Copenhagen</div>
+
+                <div class="year">2022</div>
+                <div class="feature-item">Hotel Pro Forma, light design for theatre play, Aveny-T, Copenhagen</div>
+                
+                <div class="feature-item">&nbsp;</div>
                 <div class="feature-item">Recipient of multiple artist grants from the National Arts Council</div>
             </div>
         </div>

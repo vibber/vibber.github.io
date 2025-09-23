@@ -111,6 +111,31 @@
             line-height: 1.4;
         }
 
+        .section-description {
+            max-width: 1400px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .section-description p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
+        }
+
+        .image-caption {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            margin-top: 10px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
         /* Portfolio section ensures full width */
         .portfolio-section {
             margin-bottom: 80px;
@@ -231,7 +256,7 @@
 
         .image-grid.grid-3 {
             grid-template-columns: repeat(3, 1fr);
-            max-width: 1200px;
+            max-width: 1400px;
         }
 
         .image-grid.grid-4 {
@@ -239,9 +264,11 @@
             max-width: 1400px;
         }
 
+
         .image-grid.grid-2 {
             grid-template-columns: repeat(2, 1fr);
-            max-width: 900px;
+            max-width: 1400px;
+            margin-bottom: 40px;
         }
 
         .image-grid.grid-1 {
@@ -603,6 +630,13 @@
                 width: 95vw;
                 height: 53.4375vw; /* 16:9 aspect ratio */
             }
+
+            /* Stack section description on mobile */
+            .section-description {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                max-width: 90% !important;
+            }
         }
     </style>
 </head>
@@ -613,7 +647,7 @@
         <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="#" class="active">Works</a></li>
-            <li><a href="features.html">Features</a></li>          
+            <li><a href="features.html">CV</a></li>          
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -637,8 +671,39 @@
         </div>
     </div>
 
-    <!-- Main Content -->
+<!-- Main Content -->
     <div class="content-container">
+        
+        <!-- 0-100-rewinding-the-spectacle Section -->
+        <div class="portfolio-section">
+            <h1 class="section-title">Rewinding The Spectacle</h1>
+            <p class="section-info">4 digital images, 2025</p>
+            <div class="section-description">
+                <p>Five viral AI-generated images from the Trump era went viral on social media: Trump depicted as the Pope, as Superman, wielding a lightsaber, as a golden statue, and lounging poolside in Gaza. These polished deepfakes spread across platforms, sometimes as jokes and sometimes as serious propaganda, forever changing how we consume media.</p>
+
+<p>But when you run these same images through Disco Diffusion—an AI tool that was cutting-edge in 2022 but now feels ancient—something interesting happens. The fake authority of these images falls apart completely. The papal throne turns into messy golden streaks. The lightsaber becomes a bleeding neon blur across shapes you can't even recognize. Just three years between AI generations, and the technology that once seemed so advanced now looks like digital archaeology.</p>
+            </div>
+            <div class="image-grid grid-2">
+                <div>
+                    <img src="portfolio/0-100-rewinding-the-spectacle/TimeToDisco(4)_1.png" alt="Time To Disco 4" data-lightbox="time-to-disco">
+                    <div class="image-caption">Donald Trump dressed as a Pope, sitting on a golden throne and holding up a finger as if giving a blessing or making a point.</div>
+                </div>
+                <div>
+                    <img src="portfolio/0-100-rewinding-the-spectacle/TimeToDisco(5)_7.png" alt="Time To Disco 5" data-lightbox="time-to-disco">
+                    <div class="image-caption">Donald Trump depicted as Superman, complete with the iconic blue suit, red cape, and "S" emblem on his chest.</div>
+                </div>
+            </div>
+            <div class="image-grid grid-2">
+                <div>
+                    <img src="portfolio/0-100-rewinding-the-spectacle/TimeToDisco(6)_1.png" alt="Time To Disco 6" data-lightbox="time-to-disco">
+                    <div class="image-caption">A massive, golden statue of Donald Trump standing in the middle of a busy, modern city street lined with people and palm trees.</div>
+                </div>
+                <div>
+                    <img src="portfolio/0-100-rewinding-the-spectacle/TimeToDisco(7)_0.png" alt="Time To Disco 7" data-lightbox="time-to-disco">
+                    <div class="image-caption">Donald Trump and Benjamin Netanyahu in swim trunks relaxing on lounge chairs near a swimming pool, with a sign in the background reading "TRUMP GAZA."</div>
+                </div>
+            </div>
+        </div>
         
         <!-- Halo Soft Thing Section -->
         <div class="portfolio-section">
