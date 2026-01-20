@@ -232,31 +232,34 @@
             font-family: 'Times New Roman', Times, serif;
             font-weight: normal;
             letter-spacing: 1px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: white !important;
             position: relative;
             z-index: 1;
         }
 
-        /* New style for the Vertigo header to match page-title */
-        .vertigo-header {
-            font-size: 28px;
+        /* Section headers for CV categories */
+        .section-header {
+            font-size: 18px;
             font-family: 'Times New Roman', Times, serif;
-            font-weight: normal;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            margin-top: 10px;
             color: white !important;
+            text-transform: uppercase;
             position: relative;
             z-index: 1;
         }
 
-        /* New style for the date range under Vertigo header */
-        .date-range {
-            font-size: 16px;
+        /* Sub-header for contextual information */
+        .sub-header {
+            font-size: 14px;
             font-family: 'Times New Roman', Times, serif;
-            font-weight: normal;
+            font-style: italic;
             color: #ccc;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            margin-top: -10px;
         }
 
         .image-container {
@@ -303,7 +306,12 @@
         }
 
         .year-section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Add extra spacing between major CV sections */
+        .year-section:not(:last-child) {
+            padding-bottom: 10px;
         }
 
         .year {
@@ -401,48 +409,87 @@
 
         <!-- Right side - Features content -->
         <div class="features-content">
-            <h1 class="page-title">CV of Vibeke's work</h1>
-            <div class="year-section">
-                <div class="year">2025</div>
-                <div class="feature-item">Screening Intertwined video, <a href="https://25.piksel.no/mud_event/piksel25-exhibition/" target="_blank">Piksel Festival 2025</a>, Bergen, Norway</div>
-                <div class="feature-item">Group exhibition <a href="https://thewrong.org/TheNaturalGeneratedBodies" target="_blank">The Natural / Generated Bodies</a>, The Wrong Biennale</div>
-                <div class="feature-item">Screening Soma short film, Electronic Currents, Gallery 130, Oxford, Mississippi</div>
-                <div class="feature-item">Group exhibition <a href="https://thewrong.org/MarginsInFluxus" target="_blank">Margins In Fluxus</a>, The Wrong Biennale</div>
-                <div class="feature-item">Screening Soma short film, <a href="https://simultan.org/2025/sceenings/emergence-of-ai" target="_blank">Simultan Festival</a>, Timișoara, Romania</div>
-                <div class="feature-item">Double page feature in <a href="https://www.art-magazine.ai/" target="_blank">AI art Magazine #2</a></div>
-                <div class="feature-item">Feature in Prompt Magazine #15</div>
-                <div class="feature-item">Article in <a href="https://4me4you.org/artist-_udart_" target="_blank">4me4you art magazine</a></div>
-                <div class="feature-item">Display installation at Digital Design Days, Palermo</div>
-                <div class="feature-item">Featured in #10 of <a href="https://aithena.art/udart/" target="_blank">Aithena Art Mag</a></div>
-                <div class="feature-item">Week long feature on Ai Art Magazine Instagram profile</div>
-                <div class="feature-item">The body in AI, talk, ADOS, Artifex Gallery, Paris</div>
-                <div class="feature-item">Untitled, video artwork, Edge City ATX, Austin, Texas</div>
-                <div class="feature-item">Untitled, video artwork, AI fusion in film, Berlin</div>
-                <div class="feature-item">Falling, short film, honorable mention, Project Odyssey Season 2</div>
+            <h1 class="page-title">Curriculum Vitae</h1>
 
-                <div class="year">2024</div>
-                <div class="feature-item">Hands of Time, video artwork, honorable mention, Project Odyssey Season 1</div>
-                <div class="feature-item">Latent Walk, video artwork, Specialefestivalen, Copenhagen</div>
+            <!-- SELECTED GROUP EXHIBITIONS -->
+            <div class="year-section">
+                <h2 class="section-header">Selected Group Exhibitions</h2>
+
+                <div class="year">2025</div>
+                <div class="feature-item">"The Natural / Generated Bodies," <a href="https://thewrong.org/TheNaturalGeneratedBodies" target="_blank">The Wrong Biennale</a>, Online</div>
+                <div class="feature-item">"Margins In Fluxus," <a href="https://thewrong.org/MarginsInFluxus" target="_blank">The Wrong Biennale</a>, Online</div>
+                <div class="feature-item">Piksel Festival 2025 Exhibition, <a href="https://25.piksel.no/mud_event/piksel25-exhibition/" target="_blank">Piksel Festival</a>, Bergen, Norway</div>
+                <div class="feature-item">Digital Design Days, Palermo, Italy</div>
             </div>
 
+            <!-- SCREENINGS & FILM FESTIVALS -->
             <div class="year-section">
-                <h2 class="vertigo-header">As a part of Vertigo artist studio</h2>
-                <div class="date-range">2010 - present</div>
-                
+                <h2 class="section-header">Screenings & Film Festivals</h2>
+
                 <div class="year">2025</div>
-                <div class="feature-item">Melodrama 2, video projections for theatre, The Royal Danish Academy of Music, Copenhagen</div>
-                
+                <div class="feature-item">"Intertwined," Piksel Festival 2025, Bergen, Norway</div>
+                <div class="feature-item">"Soma," Electronic Currents, Gallery 130, Oxford, MS, USA</div>
+                <div class="feature-item">"Soma," <a href="https://simultan.org/2025/sceenings/emergence-of-ai" target="_blank">Simultan Festival</a>, Timișoara, Romania</div>
+                <div class="feature-item">"Untitled," Edge City ATX, Austin, TX, USA</div>
+                <div class="feature-item">"Untitled," AI Fusion in Film, Berlin, Germany</div>
+
                 <div class="year">2024</div>
-                <div class="feature-item">Oh Land, video projections for concert, The National Gallery, Copenhagen</div>
-                
+                <div class="feature-item">"Latent Walk," Specialefestivalen, Copenhagen, Denmark</div>
+            </div>
+
+            <!-- TALKS & PRESENTATIONS -->
+            <div class="year-section">
+                <h2 class="section-header">Talks & Presentations</h2>
+
+                <div class="year">2025</div>
+                <div class="feature-item">"The Body in AI," ADOS, Artifex Gallery, Paris, France</div>
+            </div>
+
+            <!-- PUBLICATIONS & PRESS -->
+            <div class="year-section">
+                <h2 class="section-header">Publications & Press Coverage</h2>
+
+                <div class="year">2025</div>
+                <div class="feature-item">Double page feature, <a href="https://www.art-magazine.ai/" target="_blank">AI Art Magazine</a>, Issue #2</div>
+                <div class="feature-item">Feature, Prompt Magazine, Issue #15</div>
+                <div class="feature-item">Artist profile, <a href="https://4me4you.org/artist-_udart_" target="_blank">4me4you Art Magazine</a></div>
+                <div class="feature-item">Featured artist, <a href="https://aithena.art/udart/" target="_blank">Aithena Art Magazine</a>, Issue #10</div>
+                <div class="feature-item">Week-long feature, AI Art Magazine Instagram</div>
+            </div>
+
+            <!-- AWARDS & HONORS -->
+            <div class="year-section">
+                <h2 class="section-header">Awards & Honors</h2>
+
+                <div class="year">2025</div>
+                <div class="feature-item">"Falling," Honorable Mention, Project Odyssey Season 2</div>
+
+                <div class="year">2024</div>
+                <div class="feature-item">"Hands of Time," Honorable Mention, Project Odyssey Season 1</div>
+            </div>
+
+            <!-- GRANTS -->
+            <div class="year-section">
+                <h2 class="section-header">Grants & Funding</h2>
+                <div class="feature-item">Recipient of multiple artist grants from the Danish Arts Council</div>
+            </div>
+
+            <!-- COLLABORATIVE PROJECTS -->
+            <div class="year-section">
+                <h2 class="section-header">Collaborative Projects</h2>
+                <div class="sub-header">As member of Vertigo Artist Studio, 2010–present</div>
+
+                <div class="year">2025</div>
+                <div class="feature-item">Melodrama 2, video projections for theater, The Royal Danish Academy of Music, Copenhagen, Denmark</div>
+
+                <div class="year">2024</div>
+                <div class="feature-item">Oh Land concert, video projections, The National Gallery, Copenhagen, Denmark</div>
+
                 <div class="year">2023</div>
-                <div class="feature-item">Vanitas/Residue, video art installation, The National Gallery, Copenhagen</div>
+                <div class="feature-item">Vanitas/Residue, video art installation, The National Gallery, Copenhagen, Denmark</div>
 
                 <div class="year">2022</div>
-                <div class="feature-item">Hotel Pro Forma, light design for theatre play, Aveny-T, Copenhagen</div>
-                
-                <div class="feature-item">&nbsp;</div>
-                <div class="feature-item">Recipient of multiple artist grants from the National Arts Council</div>
+                <div class="feature-item">Hotel Pro Forma, light design for theater, Aveny-T, Copenhagen, Denmark</div>
             </div>
         </div>
     </div>
